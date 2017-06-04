@@ -1,9 +1,11 @@
 package com.pucrs;
 
+import oracle.jdbc.pool.OracleDataSource;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import oracle.jdbc.pool.OracleDataSource;
+import static java.sql.SQLException.*;
 
 /***
  * Class that has methods to connect to an existing Oracle Database.
