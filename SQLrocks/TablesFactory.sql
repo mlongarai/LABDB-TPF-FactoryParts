@@ -1,64 +1,64 @@
-CREATE DATABASE BANCO_TESTE
-USE BANCO_TESTE
-GO
+--Tables: 8
+--Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas, Montagem
+
 CREATE TABLE FILIAL(
-ID INT IDENTITY PRIMARY KEY,
-CNPJ_Filial CHAR(11),
-Cidade VARCHAR(50)
+ID number PRIMARY KEY,
+cnpj_filial CHAR(11),
+cidade VARCHAR(50)
 )
-GO
+
 CREATE TABLE VENDEDORES(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 idFilial INT REFERENCES FILIAL(ID),
 nomeVendedor VARCHAR(50),
-CPF CHAR(11),
-Endereco VARCHAR(50)
+cpf CHAR(11),
+endereco VARCHAR(50)
 )
-GO
+
 CREATE TABLE CLIENTES(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 nomeCliente VARCHAR(50),
-CPF CHAR(11),
-Endereco VARCHAR(50),
-posicaoGeografica GEOGRAPHY
+cpf CHAR(11),
+endereco VARCHAR(50)
 )
-GO
+
 CREATE TABLE PEDIDOS(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 idVendedor INT REFERENCES VENDEDORES(ID),
 idCliente INT REFERENCES CLIENTES(ID),
-valorPedido MONEY,
-dataPedido DATETIME DEFAULT GETDATE(),
-dataEntrega DATETIME
+valorPedido int,
+dataPedido date,
+dataEntrega date
 )
-GO
+
 CREATE TABLE VENDAS(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 idPedido INT REFERENCES PEDIDOS(ID),
-dataVenda DATETIME DEFAULT GETDATE(),
-valorVenda MONEY
+dataVenda date,
+valorVenda int
 )
-GO
+
 CREATE TABLE PRODUTOS(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 nomeProduto VARCHAR(50),
-custoProduto MONEY,
-precoProduto MONEY,
+custoProduto int,
+precoProduto int,
 qtdPruduto INT CHECK(qtdPruduto > 0)
 )
-GO
+
 CREATE TABLE PECAS(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 nomePeca VARCHAR(50),
-custoPeca MONEY,
+custoPeca int,
 qtdPeca INT CHECK (qtdPeca >0)
 )
-GO
+
 CREATE TABLE MONTAGEM(
-ID INT IDENTITY PRIMARY KEY,
+ID number PRIMARY KEY,
 idPedido INT REFERENCES PEDIDOS(ID),
 idProduto INT REFERENCES PRODUTOS(ID),
 idPeca INT REFERENCES PECAS(ID),
-valorProduto MONEY,
-quantidadeProduto INT
+valorProduto int,
+quantidadeProduto INT CHECK (quantidadeProduto > 0)
 )
+
