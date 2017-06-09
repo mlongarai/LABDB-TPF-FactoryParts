@@ -1,4 +1,4 @@
-LABDB-TPF-FactoryParts
+# LABDB-TPF-FactoryParts
 
 O projeto final da disciplina consiste em desenvolver um banco de dados (utilizando o SGBD Oracle) sobre determinado tema (exemplos incluem Eleições, Rede Social, Futebol, Jogos, etc.).
 
