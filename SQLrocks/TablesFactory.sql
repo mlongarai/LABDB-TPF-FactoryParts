@@ -43,7 +43,7 @@ ID number PRIMARY KEY,
 nomeProduto VARCHAR(50),
 custoProduto int,
 precoProduto int,
-qtdPruduto INT CHECK(qtdPruduto > 0)
+qtdProduto INT CHECK(qtdProduto > 0)
 )
 
 CREATE TABLE PECAS(
