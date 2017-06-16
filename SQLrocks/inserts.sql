@@ -3,16 +3,15 @@ VALUES
 ('456321','Porto Alegre'),
 ('546123','Rio de Janeiro'),
 ('654321','São Paulo')
-GO
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco)
-VALUES
-(2,'João','99991111','Rua um, 01'),
-(1,'Maria','88882222','Rua dois, 02'),
-(3,'José','77773333','Rua tres, 03'),
-(2,'Pedro','66664444','Rua quatro, 04'),
-(1,'Paulo','55555555','Rua cinco, 05'),
-(3,'Amélia','00000000','Rua seis, 06')
-GO
+
+INSERT INTO VENDEDORES values (1,2,'João','99991111','Rua um, 01');
+INSERT INTO VENDEDORES values (4,1,'Maria','88882222','Rua dois, 02');
+INSERT INTO VENDEDORES values (3,3,'José','77773333','Rua tres, 03');
+INSERT INTO VENDEDORES values (5,2,'Pedro','66664444','Rua quatro, 04');
+INSERT INTO VENDEDORES values (6,1,'Paulo','55555555','Rua cinco, 05');
+INSERT INTO VENDEDORES values (7,3,'Amélia','00000000','Rua seis, 06')
+
+
 INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica)
 VALUES
 ('Soneca','7777777','Rua do soneca, 01',geography::Point(-30.0590095,-51.1757126,4326)),
