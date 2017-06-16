@@ -18,7 +18,7 @@ endereco VARCHAR(50)
 CREATE TABLE CLIENTES(
 ID number PRIMARY KEY,
 nomeCliente VARCHAR(50),
-cpf CHAR(11),
+cpf CHAR(11) UNIQUE,
 endereco VARCHAR(50)
 );
 
