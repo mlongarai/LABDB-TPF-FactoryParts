@@ -16,13 +16,13 @@ public class Database {
 	//private static String mUser = "ba201786";
 	//private static String mPassword = "";
 
-	//private static String mJdbcUrl = "jdbc:oracle:thin:@oracle12c.westeurope.cloudapp.azure.com:1521:orcl";
-	//private static String mUser = "system";
-	//private static String mPassword = "";
-
-	private static String mJdbcUrl = "jdbc:oracle:thin:@172.17.0.2:1521:xe";
+	private static String mJdbcUrl = "jdbc:oracle:thin:@oracle12c.westeurope.cloudapp.azure.com:1521:orcl";
 	private static String mUser = "system";
-	private static String mPassword = "oracle";
+	private static String mPassword = "Alpha!@#oracle";
+
+	//private static String mJdbcUrl = "jdbc:oracle:thin:@172.17.0.2:1521:xe";
+	//private static String mUser = "system";
+	//private static String mPassword = "oracle";
 
 	private static OracleDataSource mDataSource = null;
 

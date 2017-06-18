@@ -17,13 +17,12 @@ public class Movies {
 	 * @throws SQLException
 	 */
 	public static void selectAll(Connection connection) throws SQLException {
-		String sql = "SELECT * " + 
-					 "FROM filmes";
+		String sql = "SELECT * " + "FROM filmes2";
 		Statement statement = connection.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
 
 		while (rs.next()) {
-			int id_filme = rs.getInt("id_filme");
+			int id_filme = rs.getInt("id_filme2");
 			String titulo = rs.getString("titulo");
 			int ano = rs.getInt("ano");
 			String diretor = rs.getString("diretor");
@@ -42,9 +41,7 @@ public class Movies {
 	 * @throws SQLException
 	 */
 	public static void select(Connection connection, int movieId) throws SQLException {
-		String sql = "SELECT * " + 
-					 "FROM filmes " + 
-					 "WHERE id_filme = " + movieId;
+		String sql = "SELECT * " + "FROM filmes " + "WHERE id_filme = " + movieId;
 		
 		Statement statement = connection.createStatement();
 		ResultSet rs = statement.executeQuery(sql);

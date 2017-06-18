@@ -1,8 +1,5 @@
 package com.pucrs;
 
-import com.pucrs.Database;
-import com.pucrs.Movies;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 
