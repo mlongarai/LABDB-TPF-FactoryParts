@@ -1,95 +1,26 @@
 --Tables: 8
 --Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas, Montagem
 
-/*
-CREATE TABLE FILIAL(
-	ID 			number 		PRIMARY KEY,
-	cnpj_filial CHAR(11),
-	cidade 		VARCHAR(50),
-	uf     		CHAR(2)      NOT NULL,
-	regiao 		CHAR(2)      NOT NULL
-)
+INSERT INTO FILIAL (ID,CNPJ_Filial,Cidade,uf,regiao) VALUES (1,'456321','Porto Alegre','RS','Sul');
+INSERT INTO FILIAL (ID,CNPJ_Filial,Cidade,uf,regiao) VALUES (2,'546123','Rio de Janeiro','RJ','Norte');
+INSERT INTO FILIAL (ID,CNPJ_Filial,Cidade,uf,regiao) VALUES (3,'654331','Belo Horizonte','MG','Norte');
+INSERT INTO FILIAL (ID,CNPJ_Filial,Cidade,uf,regiao) VALUES (4,'654555','Curitiba','PR','Sul');
+INSERT INTO FILIAL (ID,CNPJ_Filial,Cidade,uf,regiao) VALUES (5,'654876','Joinville','SC','Sul');
 
-CREATE TABLE CLIENTES(
-	ID 			number 		PRIMARY KEY,
-	nomeCliente VARCHAR(50),
-	cpf 		CHAR(11),
-	endereco 	VARCHAR(50),
-	cidade 		VARCHAR(50)
-)
+INSERT INTO VENDEDORES (ID,idFilial,nomeVendedor,CPF,Endereco) VALUES (1,1,'João','99991111','Rua um, 01');
+INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco) VALUES (2,2,'Maria','88882222','Rua dois, 02');
+INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco) VALUES (3,3,'José','77773333','Rua tres, 03');
+INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco) VALUES (4,4,'Pedro','66664444','Rua quatro, 04');
+INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco) VALUES (5,5,'Paulo','55555555','Rua cinco, 05');
+INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco) VALUES (6,6,'Amélia','00000000','Rua seis, 06');
 
-CREATE TABLE VENDEDORES(
-	ID 			number 		PRIMARY KEY,
-	idFilial 	INT 		REFERENCES FILIAL(ID),
-	nomeVendedor VARCHAR(50),
-	cpf 		CHAR(11),
-	endereco 	VARCHAR(50)
-)
-
-CREATE TABLE PEDIDOS(
-	ID 			number 		PRIMARY KEY,
-	idVendedor 	INT 		REFERENCES VENDEDORES(ID),
-	idCliente 	INT 		REFERENCES CLIENTES(ID),
-	valorPedido int,
-	dataPedido 	date,
-	dataEntrega date
-)
-
-CREATE TABLE VENDAS(
-	ID 			number 		PRIMARY KEY,
-	idPedido 	INT 		REFERENCES PEDIDOS(ID),
-	dataVenda 	date,
-	owner 		VARCHAR(50),
-	valorVenda 	int
-)
-
-CREATE TABLE PRODUTOS(
-	ID 			number 		PRIMARY KEY,
-	nomeProduto VARCHAR(50),
-	custoProduto int,
-	precoProduto int,
-	qtdProduto 	INT 		CHECK(qtdProduto > 0)
-)
-
-CREATE TABLE PECAS(
-	ID 			number 		PRIMARY KEY,
-	nomePeca 	VARCHAR(50),
-	custoPeca 	int,
-	dataFabPeca date,
-	qtdPeca 	INT 		CHECK (qtdPeca >0)
-)
-
-CREATE TABLE MONTAGEM(
-	ID 			number 		PRIMARY KEY,
-	idPedido 	INT 		REFERENCES PEDIDOS(ID),
-	idProduto 	INT 		REFERENCES PRODUTOS(ID),
-	idPeca 		INT 		REFERENCES PECAS(ID),
-	valorProduto int,
-	quantidadeProduto INT 	CHECK (quantidadeProduto > 0)
-)
-
-*/
-
-INSERT INTO FILIAL (CNPJ_Filial,Cidade,uf,regiao) VALUES ('456321','Porto Alegre');
-INSERT INTO FILIAL (CNPJ_Filial,Cidade,uf,regiao) VALUES ('546123','Rio de Janeiro');
-INSERT INTO FILIAL (CNPJ_Filial,Cidade,uf,regiao) VALUES ('654331','Belo Horizonte');
-INSERT INTO FILIAL (CNPJ_Filial,Cidade,uf,regiao) VALUES ('654555','Curitiba');
-INSERT INTO FILIAL (CNPJ_Filial,Cidade,uf,regiao) VALUES ('654876','Joinville');
-
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (2,'João','99991111','Rua um, 01','Salvador');
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (1,'Maria','88882222','Rua dois, 02');
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (3,'José','77773333','Rua tres, 03');
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (2,'Pedro','66664444','Rua quatro, 04');
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (1,'Paulo','55555555','Rua cinco, 05');
-INSERT INTO VENDEDORES (idFilial,nomeVendedor,CPF,Endereco,cidade) VALUES (3,'Amélia','00000000','Rua seis, 06');
-
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Soneca','7777777','Rua do soneca, 01',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Dengoso','6666666','Rua do Dengoso, 02',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Feliz','5555555','Rua do Feliz, 03',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Atchim','4444444','Rua do Atchim, 04',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Mestre','3333333','Rua do Mestre, 05',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Zangado','2222222','Rua do Zangado, 06',geography::Point(-30.0590095,-51.1757126,4326));
-INSERT INTO CLIENTES (nomeCliente,CPF,Endereco,posicaoGeografica) VALUES ('Dunga','1111111','Rua do Dunga, 07',geography::Point(-30.0590095,-51.1757126,4326));
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000001','Soneca','7777777','Rua do soneca, 01','Sao Paulo');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000002','Dengoso','6666666','Rua do Dengoso, 02','Porto Alegre');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000003','Feliz','5555555','Rua do Feliz, 03','Belo Horizonte');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000004','Atchim','4444444','Rua do Atchim, 04','Curitiba');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000005','Mestre','3333333','Rua do Mestre, 05','Joinville');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000006','Zangado','2222222','Rua do Zangado, 06','Sao Paulo');
+INSERT INTO CLIENTES (ID,nomeCliente,cpf,endereco,cidade) VALUES ('000000007','Dunga','1111111','Rua do Dunga, 07','Porto Alegre');
 
 INSERT INTO PEDIDOS (idVendedor,idCliente,valorPedido,dataEntrega) VALUES (2,1,100,'2017-05-30 00:00:00');
 INSERT INTO PEDIDOS (idVendedor,idCliente,valorPedido,dataEntrega) VALUES (2,1,700,'2017-06-02 00:00:00.000');
@@ -164,3 +95,75 @@ INSERT INTO MONTAGEM(idPedido,idProduto,idPeca) VALUES (3,3,2);
 INSERT INTO MONTAGEM(idPedido,idProduto,idPeca) VALUES (3,1,1);
 INSERT INTO MONTAGEM(idPedido,idProduto,idPeca) VALUES (3,2,1);
 INSERT INTO MONTAGEM(idPedido,idProduto,idPeca) VALUES (3,3,1);
+
+/*
+--Tables: 8
+--Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas, Montagem
+
+CREATE TABLE FILIAL(
+	ID 			number 		PRIMARY KEY,
+	cnpj_filial CHAR(11) UNIQUE,
+	cidade 		VARCHAR(50),
+	uf     		CHAR(2)      NOT NULL,
+	regiao 		CHAR(2)      NOT NULL
+);
+
+CREATE TABLE CLIENTES(
+	ID 			number 		PRIMARY KEY,
+	nomeCliente VARCHAR(50),
+	cpf 		CHAR(11) UNIQUE,
+	endereco 	VARCHAR(50),
+	cidade 		VARCHAR(50)
+);
+
+CREATE TABLE VENDEDORES(
+	ID 			number 		PRIMARY KEY,
+	idFilial 	INT 		REFERENCES FILIAL(ID),
+	nomeVendedor VARCHAR(50),
+	cpf 		CHAR(11),
+	endereco 	VARCHAR(50)
+);
+
+CREATE TABLE PEDIDOS(
+	ID 			number 		PRIMARY KEY,
+	idVendedor 	INT 		REFERENCES VENDEDORES(ID),
+	idCliente 	INT 		REFERENCES CLIENTES(ID),
+	valorPedido int,
+	dataPedido 	date,
+	dataEntrega date
+);
+
+CREATE TABLE VENDAS(
+	ID 			number 		PRIMARY KEY,
+	idPedido 	INT 		REFERENCES PEDIDOS(ID),
+	dataVenda 	date,
+	owner 		VARCHAR(50),
+	valorVenda 	int
+);
+
+CREATE TABLE PRODUTOS(
+	ID 			number 		PRIMARY KEY,
+	nomeProduto VARCHAR(50),
+	custoProduto int,
+	precoProduto int,
+	qtdProduto 	INT 		CHECK(qtdProduto > 0)
+);
+
+CREATE TABLE PECAS(
+	ID 			number 		PRIMARY KEY,
+	nomePeca 	VARCHAR(50),
+	custoPeca 	int,
+	dataFabPeca date,
+	qtdPeca 	INT 		CHECK (qtdPeca >0)
+);
+
+CREATE TABLE MONTAGEM(
+	ID 			number 		PRIMARY KEY,
+	idPedido 	INT 		REFERENCES PEDIDOS(ID),
+	idProduto 	INT 		REFERENCES PRODUTOS(ID),
+	idPeca 		INT 		REFERENCES PECAS(ID),
+	valorProduto int,
+	quantidadeProduto INT 	CHECK (quantidadeProduto > 0)
+);
+
+*/
