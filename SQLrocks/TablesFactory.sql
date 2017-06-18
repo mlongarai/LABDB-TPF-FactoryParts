@@ -29,7 +29,7 @@ CREATE TABLE PEDIDOS(
 	ID 			number 		PRIMARY KEY,
 	idVendedor 	INT 		REFERENCES VENDEDORES(ID),
 	idCliente 	INT 		REFERENCES CLIENTES(ID),
-	valorPedido int,
+	valorPedido NUMBER(5,2),
 	dataPedido 	date,
 	dataEntrega date
 );
@@ -38,8 +38,8 @@ CREATE TABLE VENDAS(
 	ID 			number 		PRIMARY KEY,
 	idPedido 	INT 		REFERENCES PEDIDOS(ID),
 	dataVenda 	date,
-	owner 		VARCHAR(50),
-	valorVenda 	int
+	owner 		VARCHAR(50) REFERENCES VENDEDORES(nomeVendedor),
+	valorVenda 	INT 		REFERENCES PEDIDOS(valorPedido)
 );
 
 CREATE TABLE PRODUTOS(
