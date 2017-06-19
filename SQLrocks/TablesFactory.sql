@@ -63,6 +63,6 @@ CREATE TABLE MONTAGEM(
 	idPedido 	INT 		REFERENCES PEDIDOS(ID),
 	idProduto 	INT 		REFERENCES PRODUTOS(ID),
 	idPeca 		INT 		REFERENCES PECAS(ID),
-	valorProduto int,
+	valorProduto NUMBER(5,2),
 	quantidadeProduto INT 	CHECK (quantidadeProduto > 0)
 );
