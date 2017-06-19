@@ -1,77 +1,81 @@
 --Tables: 8
---Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas, Montagem
-
-DROP TABLE FILIAL CASCADE CONSTRAINTS;
-DROP TABLE CLIENTES CASCADE CONSTRAINTS;
-DROP TABLE VENDEDORES CASCADE CONSTRAINTS;
-DROP TABLE PEDIDOS CASCADE CONSTRAINTS;
-DROP TABLE VENDAS CASCADE CONSTRAINTS;
-DROP TABLE PRODUTOS CASCADE CONSTRAINTS;
-DROP TABLE PECAS CASCADE CONSTRAINTS;
-DROP TABLE MONTAGEM CASCADE CONSTRAINTS;
+--Tuplas: 20 para cada tabela
+--Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas e Montagem
 
 CREATE TABLE FILIAL(
-	ID 			number 		PRIMARY KEY,
-	cnpj_filial CHAR(11) UNIQUE,
-	cidade 		VARCHAR(50),
-	uf     		CHAR(2)      NOT NULL,
-	regiao 		CHAR(2)      NOT NULL
+	IDD 			number 			NOT NULL,
+	cnpj_filial 	CHAR(11) 		UNIQUE NOT NULL,
+	cidade 			VARCHAR(50) 	NOT NULL,
+	uf     			CHAR(2)      	NOT NULL,
+	regiao 			VARCHAR(50)     NOT NULL,
+	CONSTRAINT pk_FILIAL PRIMARY KEY (IDD, cidade)
 );
 
 CREATE TABLE CLIENTES(
-	ID 			number 		PRIMARY KEY,
-	nomeCliente VARCHAR(50),
-	cpf 		CHAR(11) UNIQUE,
-	endereco 	VARCHAR(50),
-	cidade 		VARCHAR(50)
+	IDD 			number 			NOT NULL,
+	nomeCliente 	VARCHAR(50) 	NOT NULL,
+	cpf 			CHAR(11) 		UNIQUE NOT NULL,
+	endereco 		VARCHAR(50) 	NOT NULL,
+	cidade 			VARCHAR(50) 	REFERENCES FILIAL(cidade) NOT NULL,
+	CONSTRAINT pk_CLIENTES PRIMARY KEY (IDD, cidade),
+	CONSTRAINT fk_cidade FOREIGN KEY (cidade) REFERENCES FILIAL(cidade)
 );
 
-CREATE TABLE VENDAS(
-	ID 			number 		PRIMARY KEY,
-	idPedido 	INT 		REFERENCES PEDIDOS(ID),
-	dataVenda 	date,
-	owner 		VARCHAR(50),
-	valorVenda 	INT
+CREATE TABLE VENDEDORES(
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	idFilial 		INT 			REFERENCES FILIAL(IDD) NOT NULL,
+	nomeVendedor 	VARCHAR(50) 	NOT NULL,
+	cpf 			CHAR(11) UNIQUE NOT NULL,
+	endereco 		VARCHAR(50) 	NOT NULL
 );
 
 CREATE TABLE PEDIDOS(
-	ID 			number 		PRIMARY KEY,
-	idVendedor 	INT 		REFERENCES VENDEDORES(ID),
-	idCliente 	INT 		REFERENCES CLIENTES(ID),
-	valorPedido NUMBER(5,2),
-	dataPedido 	date,
-	dataEntrega date
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	idVendedor 		INT 			REFERENCES VENDEDORES(IDD) NOT NULL,
+	idCliente 		INT 			REFERENCES CLIENTES(IDD) NOT NULL,
+	valorPedido 	NUMBER(5,2) 	NOT NULL,
+	dataPedido 		date 			NOT NULL,
+	dataEntrega 	date 			NOT NULL
 );
 
 CREATE TABLE VENDAS(
-	ID 			number 		PRIMARY KEY,
-	idPedido 	INT 		REFERENCES PEDIDOS(ID),
-	dataVenda 	date,
-	owner 		VARCHAR(50) REFERENCES VENDEDORES(nomeVendedor),
-	valorVenda 	INT 		REFERENCES PEDIDOS(valorPedido)
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	idPedido 		INT 			REFERENCES PEDIDOS(IDD) NOT NULL,
+	dataVenda 		date 			NOT NULL,
+	ownerVenda 		VARCHAR(50) 	NOT NULL,
+	valorVenda 		INT 			NOT NULL
 );
 
 CREATE TABLE PRODUTOS(
-	ID 			number 		PRIMARY KEY,
-	nomeProduto VARCHAR(50),
-	custoProduto int,
-	precoProduto int,
-	qtdProduto 	INT 		CHECK(qtdProduto > 0)
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	nomeProduto 	VARCHAR(50) 	NOT NULL,
+	custoProduto 	int 			NOT NULL,
+	precoProduto 	int 			NOT NULL,
+	qtdProduto 		INT 			CHECK(qtdProduto > 0) NOT NULL
 );
 
 CREATE TABLE PECAS(
-	ID 			number 		PRIMARY KEY,
-	nomePeca 	VARCHAR(50),
-	custoPeca 	int,
-	dataFabPeca date,
-	qtdPeca 	INT 		CHECK (qtdPeca >0)
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	nomePeca 		VARCHAR(50) 	NOT NULL,
+	custoPeca 		int 			NOT NULL,
+	dataFabPeca 	date 			NOT NULL,
+	qtdPeca 		INT 			CHECK (qtdPeca >0) NOT NULL
 );
 
 CREATE TABLE MONTAGEM(
-	ID 			number 		PRIMARY KEY,
-	idPedido 	INT 		REFERENCES PEDIDOS(ID),
-	idProduto 	INT 		REFERENCES PRODUTOS(ID),
-	idPeca 		INT 		REFERENCES PECAS(ID),
-	valorProduto NUMBER(5,2),
-	quantidadeProduto INT 	CHECK (quantidadeProduto > 0)
+	IDD 			number 			PRIMARY KEY NOT NULL,
+	idPedido 		INT 			REFERENCES PEDIDOS(IDD) NOT NULL,
+	idProduto 		INT 			REFERENCES PRODUTOS(IDD) NOT NULL,
+	idPeca 			INT 			REFERENCES PECAS(IDD) NOT NULL,
+	valorProduto 	NUMBER(5,2) 	NOT NULL,
+	qtdProduto 		INT 			CHECK (qtdProduto > 0) NOT NULL
 );
+
+-- DROP TABLE FILIAL CASCADE CONSTRAINTS;
+-- DROP TABLE CLIENTES CASCADE CONSTRAINTS;
+-- DROP TABLE VENDEDORES CASCADE CONSTRAINTS;
+-- DROP TABLE PEDIDOS CASCADE CONSTRAINTS;
+-- DROP TABLE VENDAS CASCADE CONSTRAINTS;
+-- DROP TABLE PRODUTOS CASCADE CONSTRAINTS;
+-- DROP TABLE PECAS CASCADE CONSTRAINTS;
+-- DROP TABLE MONTAGEM CASCADE CONSTRAINTS;
