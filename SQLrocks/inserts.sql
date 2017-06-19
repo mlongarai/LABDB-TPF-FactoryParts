@@ -81,26 +81,24 @@ INSERT INTO PECAS(ID,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (34,'TouchSc
 INSERT INTO PECAS(ID,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (35,'TouchScreen 10" LCD Nokia',10,'2017-03-03',100);
 INSERT INTO PECAS(ID,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (36,'TouchScreen 11" LCD Nokia',10,'2017-03-03',100);
 
---- REVISAR DAQUI PRA BAIXO!!!
-
 INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (1,2,1,1000,12.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (2,5,1,2000,5.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (3,3,1,3000,50.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (4,2,1,4000,90.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (5,10,1,5000,50.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (6,11,1,6000,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (7,9,1,7000,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (8,5,1,8000,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (9,2,1,9000,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (10,1,1,10,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (11,1,1,11,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (12,1,1,12,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (13,14,1,13,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (14,12,1,14,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (15,19,1,15,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (16,13,1,16,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (17,13,1,17,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (18,19,1,18,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (19,15,1,19,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (20,15,1,20,10.00,30);
-INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (21,15,1,21,10.00,30);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (2,5,1,2000,5.00,50);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (3,3,1,3000,50.00,100);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (4,2,1,4000,90.00,300);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (5,10,1,5000,50.00,400);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (6,11,1,6000,10.00,10);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (7,9,1,7000,10.00,20);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (8,5,1,8000,10.00,90);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (9,2,1,9000,10.00,80);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (10,1,1,1000,10.00,70);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (11,1,1,1100,10.00,250);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (12,1,1,1200,10.00,331);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (13,14,1,1300,10.00,412);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (14,12,1,1400,10.00,32);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (15,19,1,1500,10.00,35);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (16,13,1,1600,10.00,39);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (17,13,1,1700,10.00,31);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (18,19,1,1800,10.00,31);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (19,15,1,1900,10.00,34);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (20,15,1,2000,10.00,37);
+INSERT INTO MONTAGEM(ID,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (21,15,1,2100,10.00,52);
