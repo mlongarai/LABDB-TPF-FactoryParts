@@ -3,22 +3,19 @@
 --Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas e Montagem
 
 CREATE TABLE FILIAL(
-	IDD 			number 			NOT NULL,
+	IDD 			number 			PRIMARY KEY NOT NULL,
 	cnpj_filial 	CHAR(11) 		UNIQUE NOT NULL,
 	cidade 			VARCHAR(50) 	NOT NULL,
 	uf     			CHAR(2)      	NOT NULL,
 	regiao 			VARCHAR(50)     NOT NULL,
-	CONSTRAINT pk_FILIAL PRIMARY KEY (IDD, cidade)
 );
 
 CREATE TABLE CLIENTES(
-	IDD 			number 			NOT NULL,
+	IDD 			number 			PRIMARY KEY NOT NULL,
 	nomeCliente 	VARCHAR(50) 	NOT NULL,
 	cpf 			CHAR(11) 		UNIQUE NOT NULL,
 	endereco 		VARCHAR(50) 	NOT NULL,
-	cidade 			VARCHAR(50) 	REFERENCES FILIAL(cidade) NOT NULL,
-	CONSTRAINT pk_CLIENTES PRIMARY KEY (IDD, cidade),
-	CONSTRAINT fk_cidade FOREIGN KEY (cidade) REFERENCES FILIAL(cidade)
+	cidade 			VARCHAR(50) 	NOT NULL
 );
 
 CREATE TABLE VENDEDORES(
