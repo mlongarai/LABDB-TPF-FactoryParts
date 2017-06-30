@@ -76,21 +76,22 @@ CREATE TABLE VENDAS(
 -----------------------------------------------------
 
 CREATE TABLE PRODUTOS(
-	IDD 			    number 			PRIMARY KEY NOT NULL,
+	IDD 			    number 		PRIMARY KEY NOT NULL,
 	nomeProduto 	VARCHAR(50) 	NOT NULL,
 	custoProduto 	NUMBER(5,2) 	NOT NULL,
 	precoProduto 	NUMBER(5,2)		NOT NULL,
+	idPedido		NUMBER 			REFERENCES PECAS (IDD),
 	qtdProduto 		INT 			CHECK(qtdProduto > 0) NOT NULL
 );
 
 -- INSERT INTO PRODUTOS (IDD, nomeProduto, custoProduto, precoProduto, qtdProduto) VALUES ('1', 'Produto', 100.00, 20.00, 3);
 
 CREATE TABLE PECAS(
-	IDD 			number 			PRIMARY KEY NOT NULL,
-	nomePeca 		VARCHAR(50) UNIQUE	NOT NULL,
+	IDD 			number 					PRIMARY KEY NOT NULL,
+	nomePeca 		VARCHAR(50) UNIQUE		NOT NULL,
 	custoPeca 		NUMBER(5,2) 			NOT NULL,
-	dataFabPeca 	date 			NOT NULL,
-	qtdPeca 		INT 			CHECK (qtdPeca >0) NOT NULL
+	dataFabPeca 	date 					NOT NULL,
+	qtdPeca 		INT 					CHECK (qtdPeca >0) NOT NULL
 );
 
 -- INSERT INTO PECAS (IDD,nomePeca, custoPeca, dataFabPeca,qtdPeca) VALUES ('1', 'nomePeca', 100.00, DATE '2017-07-07', 3);
