@@ -67,6 +67,14 @@ CREATE TABLE VENDAS(
   CONSTRAINT ck_datavenda CHECK (dataVenda > DATE '2016-01-01')
 );
 
+CREATE TABLE PECAS(
+	IDD 			number 					PRIMARY KEY NOT NULL,
+	nomePeca 		VARCHAR(50) UNIQUE		NOT NULL,
+	custoPeca 		NUMBER(5,2) 			NOT NULL,
+	dataFabPeca 	date 					NOT NULL,
+	qtdPeca 		INT 					CHECK (qtdPeca >0) NOT NULL
+);
+
 CREATE TABLE PRODUTOS(
 	IDD 			    number 		PRIMARY KEY NOT NULL,
 	nomeProduto 	VARCHAR(50) 	NOT NULL,
@@ -76,18 +84,6 @@ CREATE TABLE PRODUTOS(
 	qtdProduto 		INT 			CHECK(qtdProduto > 0) NOT NULL
 );
 
--- INSERT INTO PRODUTOS (IDD, nomeProduto, custoProduto, precoProduto, qtdProduto) VALUES ('1', 'Produto', 100.00, 20.00, 3);
-
-CREATE TABLE PECAS(
-	IDD 			number 					PRIMARY KEY NOT NULL,
-	nomePeca 		VARCHAR(50) UNIQUE		NOT NULL,
-	custoPeca 		NUMBER(5,2) 			NOT NULL,
-	dataFabPeca 	date 					NOT NULL,
-	qtdPeca 		INT 					CHECK (qtdPeca >0) NOT NULL
-);
-
--- INSERT INTO PECAS (IDD,nomePeca, custoPeca, dataFabPeca,qtdPeca) VALUES ('1', 'nomePeca', 100.00, DATE '2017-07-07', 3);
-
 CREATE TABLE MONTAGEM(
 	IDD 			number 			PRIMARY KEY NOT NULL,
 	idPedido 		INT 			REFERENCES PEDIDOS(IDD) NOT NULL,
@@ -96,6 +92,7 @@ CREATE TABLE MONTAGEM(
 	valorProduto 	NUMBER(5,2) 	NOT NULL,
 	qtdProduto 		INT 			CHECK (qtdProduto > 0) NOT NULL
 );
+
 
 -- DROP TABLE FILIAL CASCADE CONSTRAINTS;
 -- DROP TABLE CLIENTES CASCADE CONSTRAINTS;

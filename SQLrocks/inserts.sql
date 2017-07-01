@@ -111,6 +111,68 @@ INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('18', '
 INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('19', '19', DATE '2017-09-02','19','19');
 INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('20', '20', DATE '2017-10-08','20','20');
 
---INSERT TABLE PRODUTOS
 --INSERT TABLE PECAS
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('1', 'Flat cable', 1.00, DATE '2014-11-19','1100');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('2', 'Circuit 1', 2.00, DATE '2017-11-12','300');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('3', 'Circuit 2', 2.00, DATE '2015-10-19','350');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('4', 'Circuit 3', 2.00, DATE '2013-01-03','230');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('5', 'Circuit 4', 2.00, DATE '2017-11-19','150');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('6', 'Circuit 5', 2.00, DATE '2017-08-14','102');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('7', 'Display 1', 5.00, DATE '2017-11-05','142');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('8', 'Display 2', 5.00, DATE '2013-11-19','1023');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('9', 'Display 3', 5.00, DATE '2011-11-12','3022');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('10', 'Display 4', 5.00, DATE '2017-05-19','100');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('11', 'Display 5', 5.00, DATE '2017-01-03','200');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('12', 'Display 6', 5.00, DATE '2017-02-08','300');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('13', 'Display 7', 5.00, DATE '2017-03-15','444');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('14', 'Resistor 1', 1.00, DATE '2017-04-16','888');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('15', 'Resistor 2', 1.00, DATE '2013-05-17','999');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('16', 'Resistor 3', 1.00, DATE '2014-06-03','111');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('17', 'Resistor 4', 1.00, DATE '2015-07-01','2222');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('18', 'Resistor 5', 1.00, DATE '2016-07-07','4441');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('19', 'Resistor 6', 1.00, DATE '2016-12-10','4410');
+INSERT INTO PECAS (IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES ('20', 'Resistor 7', 1.00, DATE '2017-12-20','9942');
+
+--INSERT TABLE PRODUTOS
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('1', 'Webcam Integrated model 1', 5.00,8.00,'1','150');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('2', 'Webcam Integrated model 2', 10.00,15.00,'2','20');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('3', 'Webcam Integrated model 3', 10.00,15.00,'3','500');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('4', 'Webcam Integrated model 4', 10.00,15.00,'4','130');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('5', 'Webcam Integrated model 5', 10.00,15.00,'5','100');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('6', 'Rasberry 3 Model B A002', 5.00,8.00,'6','390');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('7', 'Rasberry 3 Model B A003', 5.00,8.00,'7','440');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('8', 'Rasberry 3 Model B A004', 5.00,8.00,'8','30');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('9', 'Rasberry 3 Model B A005', 5.00,8.00,'9','440');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('10', 'Rasberry 3 Model B A006', 5.00,8.00,'10','90');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('11', 'Rasberry 3 Model B A007', 5.00,8.00,'11','320');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('12', 'Rasberry Zero A001', 5.00,8.00,'12','420');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('13', 'Rasberry Zero A002', 5.00,8.00,'13','940');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('14', 'Rasberry Zero A003', 5.00,8.00,'14','120');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('15', 'Rasberry Zero A004', 5.00,8.00,'15','450');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('16', 'Rasberry Zero A005', 5.00,8.00,'16','550');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('17', 'Arduino Model C A001', 5.00,8.00,'17','660');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('18', 'Arduino Model C A002', 5.00,8.00,'18','330');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('19', 'Arduino Model C A003', 5.00,8.00,'19','660');
+INSERT INTO PRODUTOS (IDD,nomeProduto,custoProduto,precoProduto,idPedido,qtdProduto) VALUES ('20', 'Arduino Model C A004', 5.00,8.00,'20','880');
+
 --INSERT TABLE MONTAGEM
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('1','1','1','1',330.00,'50');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('2','2','2','2',155.00,'530');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('3','3','3','3',154.00,'540');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('4','4','4','4',125.00,'503');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('5','5','5','5',153.00,'502');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('6','6','6','6',154.00,'5043');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('7','7','7','7',153.00,'550');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('8','8','8','8',154.00,'504');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('9','9','9','9',155.00,'503');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('10','10','10','10',151.00,'520');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('11','11','11','11',135.00,'5043');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('12','12','12','12',145.00,'506');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('13','13','13','13',155.00,'505');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('14','14','14','14',15.00,'520');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('15','15','15','15',125.00,'50');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('16','16','16','16',145.00,'503');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('17','17','17','17',155.00,'501');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('18','18','18','18',153.00,'150');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('19','19','19','19',151.00,'250');
+INSERT INTO MONTAGEM (IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES ('20','20','20','20',152.00,'530');

@@ -14,7 +14,7 @@ SELECT valorPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER 
 
 -- b. 5 consultas das quais 2 envolvam junções entre duas tabelas e 3 envolvam junções entre três ou mais tabelas.
 
--- 1 -
+-- 1 - 
 -- 2 - 
 -- 3 - 
 -- 4 - 
