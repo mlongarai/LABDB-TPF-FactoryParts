@@ -1,125 +1,116 @@
---Tables: 8
 --Tuplas: 20 para cada tabela
 --Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas e Montagem
 
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (1,'456321','Porto Alegre','RS','Sul');
+-- INSERTS TABELA FILIAL
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('1',  '23154698748', 'Porto Alegre', 		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('2',  '68423156486', 'Porto Alegre',		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('3',  '24864665149', 'Porto Alegre',		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('4',  '53165146848', 'Porto Alegre', 		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('5',  '56165154865', 'Porto Alegre', 		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('6',  '18645145615', 'Sao Leopoldo', 		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('7',  '23186484666', 'Novo Hamburgo', 	'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('8',  '16814848848', 'Novo Hamburgo', 	'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('9',  '98415681656', 'Cachoeirinha', 		'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('10', '56185158894', 'Capao da Canoa',	'RS', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('11', '18994561656', 'Florianopolis', 	'SC', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('12', '98784513212', 'Criciuma', 			'SC', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('13', '86489465141', 'Curtibia', 			'PR', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('14', '53156484899', 'Cascavel', 			'PR', 'SUL');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('15', '21368484846', 'Sao Paulo', 		'SP', 'SUDESTE');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('16', '89789702314', 'Rio de Janeiro', 	'RJ', 'SUDESTE');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('17', '86464531313', 'Recife', 			'PE', 'NORDESTE');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('18', '54616546531', 'Manaus', 			'AM', 'NORTE');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('19', '56464564456', 'Teresina', 			'PI', 'NORDESTE');
+INSERT INTO FILIAL (IDD,cnpj_filial,cidade,uf,regiao) VALUES ('20', '18984215645', 'Cuiaba', 			'MT', 'CENTROOESTE');
 
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (1,1,'João','99991111','Rua um, 01');
+--INSERTS TABELA CLIENTES
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('1', 'Pedro',      '56489132189', 'Rua Batata', 	'Sao Paulo', 	'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('2', 'Joao',       '51189489489', 'Av Endereco',	'Piaui', 		'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('3', 'Maria',      '15648948644', 'Rua Bento', 		'Teresina', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('4', 'Tiago',      '36418648948', 'Travessa Treze', 'Manaus', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('5', 'Joaquim',    '16898189161', 'Rua Professor', 	'Rio de Janeiro', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('6', 'Natalia',    '65141651561', 'Av Batata', 		'Cachoeirinha', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('7', 'Joana',      '84846545131', 'Rua Teste', 		'Porto Alegre', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('8', 'Lucas',      '65484532458', 'Av Risco', 		'Porto Alegre', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('9', 'Marcelo',    '15648648489', 'Rua Adalberto', 	'Rio de Janeiro', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('10', 'Leonardo',  '23145648648', 'Rua Trinca', 	'Rio de Janeiro', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('11', 'Adriene',   '21186874687', 'Av Otaviano', 	'Capao da Canoa', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('12', 'Mariana',   '56486432154', 'Rua Jesse', 		'Recife', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('13', 'Carolina',  '23184896465', 'Rua James', 		'Recife', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('14', 'Henrique',  '25544654564', 'Av Pikachu', 	'Recife', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('15', 'Guilherme', '56468646543', 'Rua Digimon', 	'Cuaiaba', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('16', 'Murilo',    '31446848946', 'Rua Digitais', 	'Cascavel', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('17', 'Matheus',   '14564564656', 'Av Domingao', 	'Novo Hamburgo', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('18', 'Ricardo',   '36464131231', 'Rua Caldeirao', 	'Florianopolis', 'M');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('19', 'Silvia',    '54848645116', 'Rua Cenoura', 	'Cascavel', 'F');
+INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('20', 'Renata',    '54156467455', 'Av Desenrolo', 	'Cascavel', 'F');
 
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (1,'Soneca','7777777','Rua do soneca, 01','Sao Paulo');
+--INSERT TABELA VENDEDORES
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('1', '1', 'Silvia', 	'63254698965', 'Rua 1', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('2', '1', 'Pedro', 	'65454654654', 'Rua 2', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('3', '1', 'Marco', 	'13215645665', 'Rua 3', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('4', '2', 'Gabriel', 	'65415615688', 'Av 1', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('5', '2', 'Alberto', 	'56456456145', 'Av 2', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('6', '3', 'Matheus', 	'64563553785', 'Rua 4', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('7', '4', 'Mauricio',	'23423423566', 'Rua 5', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('8', '4', 'Fernanda', 	'44564574858', 'Av 3', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('9', '4', 'Monique', 	'23426867976', 'Av 4', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('10', '4', 'Antonio', 	'34534776978', 'Av 5', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('11', '4', 'Augusto', 	'34523527845', 'Rua 6', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('12', '5', 'Joao', 	'23452684845', 'Rua 7', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('13', '5', 'Gabriel', 	'25235475885', 'Av 6', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('14', '6', 'Henrique', '24355878906', 'Av 7', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('15', '7', 'Marcos', 	'69584753234', 'Rua 8', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('16', '8', 'Ricardo', 	'07056456235', 'Rua 9', 'M');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('17', '15', 'Silvia', 	'23469704636', 'Av 8', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('18', '16', 'Luciane', '23462464573', 'Av 9', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('19', '11', 'Renata', 	'12312354353', 'Rua 10', 'F');
+INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,cpf,endereco,sexo) VALUES ('20', '13', 'Jessica', '12314235346', 'Rua 11', 'F');
 
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (1,1,1,900.00,DATE '2017-03-01',DATE '2017-02-03');
+--INSERT TABELA PEDIDOS
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('1', '1', '1', '1', 376.00, DATE '2017-07-21', DATE '2017-07-23');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('2', '2', '2', '1', 973.00, DATE '2017-06-22', DATE '2017-06-25');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('3', '3', '3', '1', 125.00, DATE '2017-12-11', DATE '2017-12-12');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('4', '4', '4', '1', 237.00, DATE '2017-11-11', DATE '2017-11-13');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('5', '5', '5', '1', 134.00, DATE '2017-09-11', DATE '2017-09-19');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('6', '6', '6', '1', 234.00, DATE '2017-01-13', DATE '2017-01-21');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('7', '7', '7', '1', 456.00, DATE '2017-12-14', DATE '2017-12-20');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('8', '8', '8', '1', 500.00, DATE '2017-03-15', DATE '2017-03-29');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('9', '9', '9', '1', 768.00, DATE '2017-03-16', DATE '2017-03-22');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('10', '10', '10', '1', 123.00, DATE '2017-04-13', DATE '2017-04-14');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('11', '11', '11', '1', 235.00, DATE '2017-06-11', DATE '2017-06-15');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('12', '12', '12', '1', 253.00, DATE '2017-08-11', DATE '2017-08-12');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('13', '13', '13', '1', 234.00, DATE '2017-07-14', DATE '2017-07-19');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('14', '14', '14', '1', 895.00, DATE '2017-07-15', DATE '2017-07-17');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('15', '15', '15', '1', 546.00, DATE '2017-11-14', DATE '2017-11-21');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('16', '16', '16', '1', 568.00, DATE '2017-11-18', DATE '2017-11-28');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('17', '17', '17', '1', 675.00, DATE '2017-03-11', DATE '2017-03-12');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('18', '18', '18', '1', 234.00, DATE '2017-05-01', DATE '2017-05-03');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('19', '19', '19', '1', 175.00, DATE '2017-09-01', DATE '2017-09-08');
+INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,idFilial,valorPedido,dataPedido,dataEntrega) VALUES ('20', '20', '20', '1', 257.00, DATE '2017-10-07', DATE '2017-10-09');
 
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,1,DATE '2017-06-05','João',900.00);
+--INSERT TABLE VENDAS
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('1', '1', DATE '2017-07-22','1','1');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('2', '2', DATE '2017-06-23','2','2');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('3', '3', DATE '2017-12-12','3','3');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('4', '4', DATE '2017-11-12','4','4');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('5', '5', DATE '2017-09-12','5','5');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('6', '6', DATE '2017-01-14','6','6');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('7', '7', DATE '2017-12-15','7','7');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('8', '8', DATE '2017-03-16','8','8');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('9', '9', DATE '2017-03-17','9','9');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('10', '10', DATE '2017-04-14','10','10');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('11', '11', DATE '2017-06-12','11','11');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('12', '12', DATE '2017-08-12','12','12');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('13', '13', DATE '2017-07-15','13','13');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('14', '14', DATE '2017-07-16','14','14');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('15', '15', DATE '2017-11-15','15','15');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('16', '16', DATE '2017-11-19','16','16');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('17', '17', DATE '2017-03-12','17','17');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('18', '18', DATE '2017-05-02','18','18');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('19', '19', DATE '2017-09-02','19','19');
+INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('20', '20', DATE '2017-10-08','20','20');
 
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (1,'SmartPhone Samsung',0,0,4);
-
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (1,'Display 5" LCD Samsung',10,DATE '2017-02-03',100);
-
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,qtdProduto) VALUES (1,1,1,1,12.00,30);
-
-
-/*
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (1,'456321','Porto Alegre','RS','Sul');
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (2,'546123','Rio de Janeiro','RJ','Norte');
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (3,'654331','Belo Horizonte','MG','Norte');
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (4,'654555','Curitiba','PR','Sul');
-INSERT INTO FILIAL (IDD,CNPJ_Filial,Cidade,uf,regiao) VALUES (5,'654876','Joinville','SC','Sul');
-
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (1,1,'João','99991111','Rua um, 01');
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (2,2,'Maria','88882222','Rua dois, 02');
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (3,3,'José','77773333','Rua tres, 03');
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (4,4,'Pedro','66664444','Rua quatro, 04');
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (5,5,'Paulo','55555555','Rua cinco, 05');
-INSERT INTO VENDEDORES (IDD,idFilial,nomeVendedor,CPF,Endereco) VALUES (6,6,'Amélia','00000000','Rua seis, 06');
-
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (1,'Soneca','7777777','Rua do soneca, 01','Sao Paulo');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (2,'Dengoso','6666666','Rua do Dengoso, 02','Porto Alegre');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (3,'Feliz','5555555','Rua do Feliz, 03','Belo Horizonte');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (4,'Atchim','4444444','Rua do Atchim, 04','Curitiba');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (5,'Mestre','3333333','Rua do Mestre, 05','Joinville');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (6,'Zangado','2222222','Rua do Zangado, 06','Sao Paulo');
-INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade) VALUES (7,'Dunga','1111111','Rua do Dunga, 07','Porto Alegre');
-
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (1,1,1,900.00,DATE '2017-03-01',DATE '2017-02-03');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (2,2,3,350.00,'2017-03-30 00:00:00','2017-04-02');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (3,2,1,100.00,'2017-04-28 00:00:00','2017-04-30');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (4,4,3,150.00,'2017-05-30 00:00:00','2017-06-01');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (5,5,5,200.00,'2017-03-29 00:00:00','2017-03-30');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (6,4,4,180.00,'2017-02-15 00:00:00','2017-02-17');
-INSERT INTO PEDIDOS (IDD,idVendedor,idCliente,valorPedido,dataPedido,dataEntrega) VALUES (7,3,6,500.00,'2017-06-01 00:00:00','2017-06-05');
-
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','João',900.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','Maria',350.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','Maria',100.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','Pedro',150.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','Paulo',200.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','Pedro',180.00);
-INSERT INTO VENDAS(IDD,idPedido,dataVenda,ownerVenda,valorVenda) VALUES (1,3,'2017-06-05','José',500.00);
-
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (1,'SmartPhone Samsung',0,0,4);
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (2,'Tablet MOTOROLA',0,0,2);
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (3,'SmartPhone Iphone',0,0,3);
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (4,'SmartPhone Blackberry',0,0,3);
-INSERT INTO PRODUTOS(IDD,nomeProduto,custoProduto,precoProduto,qtdProduto) VALUES (5,'SmartPhone Asus',0,0,3);
-
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (1,'Display 5" LCD Samsung',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (2,'Display 7" LCD Samsung',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (3,'Display 8.5" LCD Samsung',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (4,'Display 10" LCD Samsung',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (5,'Display 11" LCD Samsung',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (6,'Display 5" LCD MOTOROLA',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (7,'Display 7" LCD MOTOROLA',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (8,'Display 8.5" LCD MOTOROLA',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (9,'Display 10" LCD MOTOROLA',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (10,'Display 11" LCD MOTOROLA',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (11,'Display 5" LCD Nokia',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (12,'Display 7" LCD Nokia',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (13,'Display 8.5" LCD Nokia',10,'2017-02-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (14,'Display 10" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (15,'Display 11" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (16,'Placa principal(circuito) Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (17,'Placa principal(circuito) MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (18,'Placa principal(circuito) Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (19,'Bateria Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (20,'Bateria MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (21,'Bateria Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (22,'TouchScreen 5" LCD Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (23,'TouchScreen 7" LCD Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (24,'TouchScreen 8.5" LCD Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (25,'TouchScreen 10" LCD Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (26,'TouchScreen 11" LCD Samsung',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (27,'TouchScreen 5" LCD MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (28,'TouchScreen 7" LCD MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (29,'TouchScreen 8.5" LCD MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (30,'TouchScreen 10" LCD MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (31,'TouchScreen 11" LCD MOTOROLA',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (32,'TouchScreen 5" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (33,'TouchScreen 7" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (34,'TouchScreen 8.5" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (35,'TouchScreen 10" LCD Nokia',10,'2017-03-03',100);
-INSERT INTO PECAS(IDD,nomePeca,custoPeca,dataFabPeca,qtdPeca) VALUES (36,'TouchScreen 11" LCD Nokia',10,'2017-03-03',100);
-
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (1,2,1,1000,12.00,30);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (2,5,1,2000,5.00,50);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (3,3,1,3000,50.00,100);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (4,2,1,4000,90.00,300);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (5,10,1,5000,50.00,400);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (6,11,1,6000,10.00,10);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (7,9,1,7000,10.00,20);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (8,5,1,8000,10.00,90);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (9,2,1,9000,10.00,80);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (10,1,1,1000,10.00,70);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (11,1,1,1100,10.00,250);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (12,1,1,1200,10.00,331);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (13,14,1,1300,10.00,412);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (14,12,1,1400,10.00,32);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (15,19,1,1500,10.00,35);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (16,13,1,1600,10.00,39);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (17,13,1,1700,10.00,31);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (18,19,1,1800,10.00,31);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (19,15,1,1900,10.00,34);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (20,15,1,2000,10.00,37);
-INSERT INTO MONTAGEM(IDD,idPedido,idProduto,idPeca,valorProduto,quantidadeProduto) VALUES (21,15,1,2100,10.00,52);
-
-*/
+--INSERT TABLE PRODUTOS
+--INSERT TABLE PECAS
+--INSERT TABLE MONTAGEM

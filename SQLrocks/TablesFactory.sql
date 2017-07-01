@@ -1,13 +1,13 @@
 --Tables: 8
---Tuplas: 20 para cada tabela
 --Filial, Vendedores, Clientes, Pedidos, Vendas, Produtos, Pecas e Montagem
 
 CREATE TABLE FILIAL(
 	IDD 			    number 			  PRIMARY KEY NOT NULL,
-	cnpj_filial 	CHAR(11) 		  UNIQUE      NOT NULL,
-	cidade 			  VARCHAR(50)  	            NOT NULL,
-	uf     			  CHAR(2)      	            NOT NULL,
-	regiao 			  VARCHAR(50)               NOT NULL,
+	cnpj_filial 		CHAR(11) 		  UNIQUE      NOT NULL,
+	cidade 				VARCHAR(50)  	          	  NOT NULL,
+	uf     			  	CHAR(2)      	           	  NOT NULL,
+	regiao 			  	VARCHAR(50)             	  NOT NULL,
+	
   CONSTRAINT ck_uf CHECK (uf in           ('AC','AL','AP','AM','BA','CE','DF','ES','GO','MA',
                                            'MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN',
                                            'RS','RO','RR','SC','SP','SE','TO')),
@@ -18,11 +18,11 @@ CREATE TABLE FILIAL(
 
 CREATE TABLE CLIENTES(
 	IDD 			    number 			  PRIMARY KEY NOT NULL,
-	nomeCliente 	VARCHAR(50) 	            NOT NULL,
+	nomeCliente 		VARCHAR(50) 	           	  NOT NULL,
 	cpf 			    CHAR(11) 		  UNIQUE      NOT NULL,
-	endereco 		  VARCHAR(50) 	            NOT NULL,
-	cidade 			  VARCHAR(50) 	            NOT NULL,
-  sexo          CHAR(1)                   NOT NULL,
+	endereco 		  	VARCHAR(50) 	              NOT NULL,
+	cidade 			  	VARCHAR(50) 	              NOT NULL,
+	sexo          		CHAR(1)                       NOT NULL,
   
   CONSTRAINT ck_sexocl CHECK (sexo in     ('M','F'))
 );
@@ -30,12 +30,12 @@ CREATE TABLE CLIENTES(
 --INSERT INTO CLIENTES (IDD,nomeCliente,cpf,endereco,cidade,sexo) VALUES ('1', 'Pedro', '12345698785', 'Endereco', 'Cidade', 'M');
 
 CREATE TABLE VENDEDORES(
-	IDD 			    number 			   PRIMARY KEY NOT NULL,
-	idFilial 		  INT 			     REFERENCES FILIAL(IDD) NOT NULL,
-	nomeVendedor 	VARCHAR(50) 	            NOT NULL,
-	cpf 			    CHAR(11)       UNIQUE     NOT NULL,
-	endereco 		  VARCHAR(50) 	            NOT NULL,
-  sexo          CHAR(1)                   NOT NULL,
+	IDD 			    number 			   PRIMARY KEY 				NOT NULL,
+	idFilial 		  	INT 			   REFERENCES FILIAL(IDD) 	NOT NULL,
+	nomeVendedor 		VARCHAR(50) 	            				NOT NULL,
+	cpf 			    CHAR(11)       	   UNIQUE     				NOT NULL,
+	endereco 			VARCHAR(50) 	            				NOT NULL,
+	sexo          		CHAR(1)                   					NOT NULL,
   
   CONSTRAINT ck_sexovn CHECK (SEXO in ('M','F'))
 );
@@ -44,13 +44,13 @@ CREATE TABLE VENDEDORES(
 --DELETE FROM VENDEDORES WHERE IDD = 1;
 
 CREATE TABLE PEDIDOS(
-	IDD 			number 			PRIMARY KEY NOT NULL,	
-  idVendedor 		INT 			REFERENCES VENDEDORES(IDD) NOT NULL,
-	idCliente 		INT 			REFERENCES CLIENTES(IDD) NOT NULL,
-  idFilial      INT       REFERENCES FILIAL(IDD)  NOT NULL,
-	valorPedido 	NUMBER(5,2)  NOT NULL,
-	dataPedido 		DATE 			NOT NULL,
-	dataEntrega 	DATE 			NOT NULL,
+	IDD 			number 			PRIMARY KEY 				NOT NULL,	
+    idVendedor 		INT 			REFERENCES VENDEDORES(IDD) 	NOT NULL,
+	idCliente 		INT 			REFERENCES CLIENTES(IDD) 	NOT NULL,
+	idFilial     	INT       		REFERENCES FILIAL(IDD) 		NOT NULL,
+	valorPedido 	NUMBER(5,2)  								NOT NULL,
+	dataPedido 		DATE 										NOT NULL,
+	dataEntrega 	DATE 										NOT NULL,
   
   CONSTRAINT ck_datas CHECK (dataPedido < dataEntrega)
 );
@@ -66,14 +66,6 @@ CREATE TABLE VENDAS(
   
   CONSTRAINT ck_datavenda CHECK (dataVenda > DATE '2016-01-01')
 );
--- DROP TABLE VENDAS CASCADE CONSTRAINTS;
--- idVendedor e idCliente devem ser importados de suas respectivas tabelas de acordo com o idPedido
--- INSERT INTO VENDAS (IDD,idPedido,dataVenda,idVendedor,idCliente) VALUES ('1', '1', DATE '2017-06-06','1','1');
-
-
--- ATE AQUI  ACHO QUE TA CERTO, AS TABELAS DE BAIXO NAO FAZEM MUITO SENTIDO JA QUE NAO REFERENCIAM COM NENHUMA DE CIMA, 
--- QUE JA SAO 5 QUE O PROFESSOR PEDIU
------------------------------------------------------
 
 CREATE TABLE PRODUTOS(
 	IDD 			    number 		PRIMARY KEY NOT NULL,
