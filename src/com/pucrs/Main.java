@@ -10,24 +10,16 @@ public class Main {
 
 	public static void main(String[] args) throws SQLException {
 		
-		// Gets a database connection.
+		//Open the connection
 		Connection conn = Database.getConnection();
 
-		// Selects all movies
-		Movies.selectAll(conn);
+		// -- 1 - Cidades da região SUL:
+		// SELECT * FROM FILIAL WHERE regiao LIKE 'SUL' ORDER BY regiao ASC;
+		//Factory.selectCidadesSul(conn);
 
-		// Selects one movie
-		//Movies.select(conn, 2);
-		
-		// Insert a new movie
-		//Movies.insert(conn, "Test", 1990, "Another Test");
-		
-		// Update an existing movie
-		// Movies.update(conn, 42, "Test", 1990, "Another Test 2");
-		
-		// Deletes a movie
-		//Movies.delete(conn, 19);
-		//Movies.delete(conn, 20);
+		//-- 2 - Quantidade de filiais:
+		//SELECT count(*) FROM FILIAL;
+		Factory.selectQtdFilial(conn);
 
 		// Close the connection.
 		conn.close();

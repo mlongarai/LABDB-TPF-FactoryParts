@@ -12,17 +12,19 @@ import static java.sql.SQLException.*;
  */
 public class Database {
 
+	/***
+	 * Database Oracle On-Premises PUCRS camburi
+	 */
 	//private static String mJdbcUrl = "jdbc:oracle:thin:@camburi.pucrs.br:1521:facin11g";
 	//private static String mUser = "ba201786";
 	//private static String mPassword = "";
 
+	/***
+	 * Database Oracle on Azure
+	 */
 	private static String mJdbcUrl = "jdbc:oracle:thin:@oracle12c.westeurope.cloudapp.azure.com:1521:orcl";
 	private static String mUser = "system";
 	private static String mPassword = "Alpha!@#oracle";
-
-	//private static String mJdbcUrl = "jdbc:oracle:thin:@172.17.0.2:1521:xe";
-	//private static String mUser = "system";
-	//private static String mPassword = "oracle";
 
 	private static OracleDataSource mDataSource = null;
 
