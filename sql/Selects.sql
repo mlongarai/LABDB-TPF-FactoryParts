@@ -13,9 +13,23 @@ SELECT valorPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER 
 
 -- b. 5 consultas das quais 2 envolvam junções entre duas tabelas e 3 envolvam junções entre três ou mais tabelas.
 
--- 1 - 
--- 2 - 
--- 3 - 
+-- 1. Nome do cliente, cpf, id pedido, valor - 2 Tabelas
+select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR
+from CLIENTES join PEDIDOS
+on clientes.IDD = pedidos.idCliente
+order by valorPedido
+
+-- 2. ID pedido, ID peça - 2 Tabelas
+select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA
+from PEDIDOS join MONTAGEM
+on pedidos.IDD = montagem.idPedido
+
+-- 3. xxxxxxxxxxxxx 3 Tabelas
+select pecas.nomePeca, produtos.nomeProduto, clientes.nomeCliente, pedidos.idCliente, pedidos.valorPedido, pedidos.dataEntrega
+from CLIENTES join PEDIDOS 
+on pedidos.idCliente = clientes.IDD
+join montagem
+on montage.idPedido = pedidos.IDD
 -- 4 - 
 -- 5 - 
 
