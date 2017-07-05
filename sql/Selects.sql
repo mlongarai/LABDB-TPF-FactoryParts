@@ -19,18 +19,22 @@ SELECT idVendedor, valorPedido, dataPedido FROM PEDIDOS WHERE EXTRACT(MONTH from
             * tabelas e 3 envolvam junções entre três ou mais tabelas.
             */
 
--- 1. Nome do cliente, cpf, id pedido, valor - 2 Tabelas
+-- 1. Nome do cliente, cpf, id pedido, valor - 2 Tabelas.
 select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR from CLIENTES join PEDIDOS on clientes.IDD = pedidos.idCliente order by valorPedido;
 
--- 2. ID pedido, ID peça - 2 Tabelas
+-- 2. ID pedido, ID peça - 2 Tabelas.
 select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA from PEDIDOS join MONTAGEM on pedidos.IDD = montagem.idPedido;
 
--- 3. xxxxxxxxxxxxx 3 Tabelas
-select pecas.nomePeca, produtos.nomeProduto, clientes.nomeCliente, pedidos.idCliente, pedidos.valorPedido, pedidos.dataEntrega
+-- 3. Nome produto, nome peça, custo peça, id pedido, data entrega do pedido. - 3 Tabelas.
+select produtos.nomeProduto, pecas.nomePeca, pecas.custoPeca, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega
 from CLIENTES join PEDIDOS 
 on pedidos.idCliente = clientes.IDD
 join montagem
-on montagem.idPedido = pedidos.IDD;
+on montagem.idPedido = pedidos.IDD
+join produtos
+on produtos.idPedido = pedidos.IDD
+join pecas 
+on pecas.IDD = montagem.idPeca
 -- 4 - 
 -- 5 - 
 
