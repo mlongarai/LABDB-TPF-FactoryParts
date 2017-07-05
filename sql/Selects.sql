@@ -17,27 +17,42 @@ SELECT valorPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER 
 select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR
 from CLIENTES join PEDIDOS
 on clientes.IDD = pedidos.idCliente
-order by valorPedido
+order by valorPedido;
 
 -- 2. ID pedido, ID peça - 2 Tabelas
 select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA
 from PEDIDOS join MONTAGEM
-on pedidos.IDD = montagem.idPedido
+on pedidos.IDD = montagem.idPedido;
 
 -- 3. xxxxxxxxxxxxx 3 Tabelas
 select pecas.nomePeca, produtos.nomeProduto, clientes.nomeCliente, pedidos.idCliente, pedidos.valorPedido, pedidos.dataEntrega
 from CLIENTES join PEDIDOS 
 on pedidos.idCliente = clientes.IDD
 join montagem
-on montage.idPedido = pedidos.IDD
+on montagem.idPedido = pedidos.IDD;
 -- 4 - 
 -- 5 - 
 
 -- c. 5 consultas envolvendo group by e having, juntamente com funções de agregação.
 
--- 1 -
--- 2 - 
--- 3 - 
+-- 1 - Qual o valor total de  cada  produto?
+select nomeProduto, sum(precoProduto*qtdProduto) Total
+from PRODUTOS
+group by nomeProduto
+order by sum(precoProduto*qtdProduto) DESC;
+-- 2 - Qual o valor médio dos pedidos por cidade(filial)?
+select filial.cidade, round(sum(mont.qtdProduto * valorPedido) / count(distinct ped.IDD),2) "Valor Medio"
+from PEDIDOS ped 
+        inner join FILIAL filial	  	on filial.IDD	 		= ped.IDD
+        inner join MONTAGEM mont	  	on mont.IDD	 			= ped.IDD
+group by filial.cidade
+order by round(sum(mont.qtdProduto * valorPedido) / count(distinct ped.IDD),2) DESC;
+-- 3 - Qual  o valor médio faturado  com as  vendas  por pedido e vendedor?
+select ved.idPedido, ved.idVendedor, round(avg(prod.qtdProduto*prod.precoProduto),2) "Valor Medio"
+from vendas ved 
+    inner join produtos prod on ved.IDD = prod.IDD
+group by ved.idPedido, ved.idVendedor
+order by avg(prod.qtdProduto*prod.precoProduto) DESC;
 -- 4 - 
 -- 5 - 
 
