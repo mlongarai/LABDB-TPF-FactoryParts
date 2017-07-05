@@ -54,8 +54,10 @@ from vendas ved
     inner join produtos prod on ved.IDD = prod.IDD
 group by ved.idPedido, ved.idVendedor
 order by avg(prod.qtdProduto*prod.precoProduto) DESC;
--- 4 - 
--- 5 - 
+-- 4 - Filiais com mais de 2 clientes?
+SELECT FIL.cidade, COUNT(*) Quantidade FROM FILIAL fil INNER JOIN CLIENTES cli ON fil.IDD = cli.IDD GROUP BY FIL.cidade HAVING COUNT(*) > 2;
+-- 5 - Produtos com media de quantidade maior que 2?
+SELECT nomeProduto, COUNT(*) Quantidade FROM PRODUTOS GROUP BY nomeProduto HAVING avg(precoProduto) > 2;
 
 /*
             * -- d. 5 consultas envolvendo sub-consultas.

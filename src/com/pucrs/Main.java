@@ -75,9 +75,13 @@ public class Main {
             // select ved.idPedido ID_PEDIDO, ved.idVendedor ID_VENDEDOR, round(avg(prod.qtdProduto*prod.precoProduto),2) Valor_Medio from vendas ved inner join produtos prod on ved.IDD = prod.IDD group by ved.idPedido, ved.idVendedor order by avg(prod.qtdProduto*prod.precoProduto) DESC;
             //Factory.selectValorFat(conn);
 
-            //-- 14 -
+            //-- 14 - Filiais com mais de 2 clientes?
+            //SELECT fil.cidade FILIAL, COUNT(*) Quantidade FROM FILIAL FIL INNER JOIN CLIENTES CLI ON FIL.IDD = cli.IDD GROUP BY fil.cidade HAVING COUNT(*) > 1;
+            //Factory.selectFilCli(conn);
 
-            //-- 15 -
+            //-- 15 - Produtos com media de quantidade maior que 2?
+            //SELECT nomeProduto, COUNT(*) Quantidade FROM PRODUTOS GROUP BY nomeProduto HAVING avg(precoProduto) > 2;
+            //Factory.selectProdMedia(conn);
 
              /*
             * -- d. 5 consultas envolvendo sub-consultas.

@@ -225,4 +225,44 @@ public class Factory {
         statement.close();
         rs.close();
     }
+
+    public static void selectFilCli(Connection connection) throws SQLException {
+        String sql = "SELECT fil.cidade FILIAL, COUNT(*) Quantidade FROM FILIAL FIL INNER JOIN CLIENTES CLI ON FIL.IDD = cli.IDD GROUP BY fil.cidade HAVING COUNT(*) > 1";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("14. --------------------------------------------------------\n");
+        System.out.println("FILIAL\t\t\t" + "Quantidade de CLientes"+ "\n");
+
+        while (rs.next()) {
+            String FILIAL = rs.getString("FILIAL");
+            int Quantidade = rs.getInt("Quantidade");
+            System.out.println(
+                    FILIAL + "\t\t\t" + Quantidade + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectProdMedia(Connection connection) throws SQLException {
+        String sql = "SELECT nomeProduto, COUNT(*) Quantidade FROM PRODUTOS GROUP BY nomeProduto HAVING avg(precoProduto) > 2";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("15. --------------------------------------------------------\n");
+        System.out.println("PRODUTO\t\t\t\t\t" + "Quantidade Média"+ "\n");
+
+        while (rs.next()) {
+            String nomeProduto = rs.getString("nomeProduto");
+            int Quantidade = rs.getInt("Quantidade");
+            System.out.println(
+                    nomeProduto + "\t\t\t\t\t" + Quantidade + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
 }
