@@ -1,28 +1,29 @@
--- a. 5 consultas básicas envolvendo os comandos distinct, order by, count(*), like, in e funções de manipulação de datas.
+/*
+            * -- a. 5 consultas básicas envolvendo os comandos distinct,
+            * order by, count(*), like, in e funções de manipulação de datas.
+            */
 
 -- 1 - Cidades da região SUL: 
 SELECT * FROM FILIAL WHERE regiao LIKE 'SUL' ORDER BY regiao ASC;
 -- 2 - Quantidade de filiais:
 SELECT count(*) FROM FILIAL;
 -- 3 - Id do Vendendor e valor dos pedidos que foram feitos nas 3 filiais especificas: 
-SELECT idVendedor,valorPedido FROM PEDIDOS where idFilial IN (1, 2, 3) ORDER BY valorPedido;
+SELECT idVendedor,valorPedido FROM PEDIDOS where idFilial IN (1, 2, 3) ORDER BY valorPedido DESC;
 -- 4 - Todos os pedidos realizados entre janeiro e  marco de 2017
 SELECT * FROM PEDIDOS where EXTRACT(MONTH from dataPedido) >= 1 AND EXTRACT(YEAR from dataPedido) = 2017 AND EXTRACT(MONTH from dataPedido) <= 3 AND EXTRACT(YEAR from dataPedido) = 2017 ORDER BY dataPedido ASC;
 -- 5 - Os valores de todos os pedidos realizados no mes de janeiro de 2017
-SELECT valorPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER BY valorPedido;
+SELECT idVendedor, valorPedido, dataPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER BY valorPedido;
 
--- b. 5 consultas das quais 2 envolvam junções entre duas tabelas e 3 envolvam junções entre três ou mais tabelas.
+/*
+            * -- b. 5 consultas das quais 2 envolvam junções entre duas
+            * tabelas e 3 envolvam junções entre três ou mais tabelas.
+            */
 
 -- 1. Nome do cliente, cpf, id pedido, valor - 2 Tabelas
-select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR
-from CLIENTES join PEDIDOS
-on clientes.IDD = pedidos.idCliente
-order by valorPedido;
+select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR from CLIENTES join PEDIDOS on clientes.IDD = pedidos.idCliente order by valorPedido;
 
 -- 2. ID pedido, ID peça - 2 Tabelas
-select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA
-from PEDIDOS join MONTAGEM
-on pedidos.IDD = montagem.idPedido;
+select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA from PEDIDOS join MONTAGEM on pedidos.IDD = montagem.idPedido;
 
 -- 3. xxxxxxxxxxxxx 3 Tabelas
 select pecas.nomePeca, produtos.nomeProduto, clientes.nomeCliente, pedidos.idCliente, pedidos.valorPedido, pedidos.dataEntrega
@@ -33,22 +34,22 @@ on montagem.idPedido = pedidos.IDD;
 -- 4 - 
 -- 5 - 
 
--- c. 5 consultas envolvendo group by e having, juntamente com funções de agregação.
+/*
+            * -- c. 5 consultas envolvendo group by e having,
+            * juntamente com funções de agregação.
+            */
 
 -- 1 - Qual o valor total de  cada  produto?
-select nomeProduto, sum(precoProduto*qtdProduto) Total
-from PRODUTOS
-group by nomeProduto
-order by sum(precoProduto*qtdProduto) DESC;
+select nomeProduto NOME, sum(precoProduto*qtdProduto) Total from PRODUTOS group by nomeProduto order by sum(precoProduto*qtdProduto) DESC;
 -- 2 - Qual o valor médio dos pedidos por cidade(filial)?
-select filial.cidade, round(sum(mont.qtdProduto * valorPedido) / count(distinct ped.IDD),2) "Valor Medio"
+select filial.cidade Cidade, round(sum(mont.qtdProduto * valorPedido) / count(distinct ped.IDD),2) Valor_Medio
 from PEDIDOS ped 
         inner join FILIAL filial	  	on filial.IDD	 		= ped.IDD
         inner join MONTAGEM mont	  	on mont.IDD	 			= ped.IDD
 group by filial.cidade
 order by round(sum(mont.qtdProduto * valorPedido) / count(distinct ped.IDD),2) DESC;
 -- 3 - Qual  o valor médio faturado  com as  vendas  por pedido e vendedor?
-select ved.idPedido, ved.idVendedor, round(avg(prod.qtdProduto*prod.precoProduto),2) "Valor Medio"
+select ved.idPedido ID_PEDIDO, ved.idVendedor ID_VENDEDOR, round(avg(prod.qtdProduto*prod.precoProduto),2) Valor_Medio
 from vendas ved 
     inner join produtos prod on ved.IDD = prod.IDD
 group by ved.idPedido, ved.idVendedor
@@ -56,7 +57,9 @@ order by avg(prod.qtdProduto*prod.precoProduto) DESC;
 -- 4 - 
 -- 5 - 
 
--- d. 5 consultas envolvendo sub-consultas.
+/*
+            * -- d. 5 consultas envolvendo sub-consultas.
+            */
 
 -- 1 -
 -- 2 - 

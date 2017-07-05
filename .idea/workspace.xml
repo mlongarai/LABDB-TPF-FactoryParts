@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31e6a929-6e46-4c7f-a26c-558ced4ecf9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pucrs/Factory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pucrs/MenuSelect.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LABDB-TPF-FactoryParts/com/pucrs/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LABDB-TPF-FactoryParts/com/pucrs/Movies.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/pucrs/Movies.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQLrocks/TablesFactory.sql" afterPath="$PROJECT_DIR$/SQLrocks/TablesFactory.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQLrocks/selects.sql" afterPath="$PROJECT_DIR$/SQLrocks/selects.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pucrs/Database.java" afterPath="$PROJECT_DIR$/src/com/pucrs/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/Selects.sql" afterPath="$PROJECT_DIR$/sql/Selects.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pucrs/Factory.java" afterPath="$PROJECT_DIR$/src/com/pucrs/Factory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pucrs/Main.java" afterPath="$PROJECT_DIR$/src/com/pucrs/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="223">
+              <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,22 +32,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="55">
+              <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1499174479000" expanded="true" signature="334:377" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:387" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:388" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:393" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:395" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:404" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="334:418" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="1412:1444" ph=" SELECT statement (FILIAL)" />
-                <marker date="1499174479000" expanded="true" signature="1412:1445" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499281801000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="7365:7502" ph=" SELECT statement (PRODUTOS)" />
+                <marker date="1499281801000" expanded="true" signature="8259:8589" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+                <marker date="1499281801000" expanded="true" signature="9370:9735" ph=" SELECT statement (VENDAS, PRODUTOS)" />
               </folding>
             </state>
           </provider>
@@ -84,16 +84,15 @@
         <option value="$PROJECT_DIR$/src/com/pucrs/Movies.java" />
         <option value="$PROJECT_DIR$/src/com/pucrs/MenuSelect.java" />
         <option value="$PROJECT_DIR$/src/com/pucrs/Database.java" />
-        <option value="$PROJECT_DIR$/src/com/pucrs/Main.java" />
         <option value="$PROJECT_DIR$/src/com/pucrs/Factory.java" />
+        <option value="$PROJECT_DIR$/src/com/pucrs/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="571" />
-    <option name="y" value="-878" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="878" />
+    <option name="height" value="839" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -485,7 +484,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="571" y="-878" width="1440" height="878" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="839" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -505,11 +504,11 @@
       <window_info id="MaxCompute Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23104435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35367545" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18311875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -528,7 +527,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -536,6 +537,43 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1499281801000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="7365:7502" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499281801000" expanded="true" signature="8259:8589" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="9370:9735" ph=" SELECT statement (VENDAS, PRODUTOS)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pucrs/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -556,14 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Movies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Movies.java" />
     <entry file="file://$PROJECT_DIR$/src/com/pucrs/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -585,19 +616,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pucrs/Reviewers.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Movies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="100" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Movies.java" />
     <entry file="jar://$PROJECT_DIR$/src/com/ojdbc7.jar!/oracle/jdbc/driver/T4CTTIfun.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,31 +641,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="223">
+          <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499174479000" expanded="true" signature="334:377" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:387" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:388" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:393" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:395" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:404" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="334:418" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="1412:1444" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499174479000" expanded="true" signature="1412:1445" ph=" SELECT statement (FILIAL)" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="55">
+          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1499281801000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499281801000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="7365:7502" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499281801000" expanded="true" signature="8259:8589" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+            <marker date="1499281801000" expanded="true" signature="9370:9735" ph=" SELECT statement (VENDAS, PRODUTOS)" />
           </folding>
         </state>
       </provider>
