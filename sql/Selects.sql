@@ -64,6 +64,5 @@ SELECT nomeProduto NOME, precoProduto PRECO FROM PRODUTOS GROUP BY nomeProduto, 
 -- 2 - Pecas que tiveram a sua media maior que a media de pecas de 2017?
 SELECT nomePeca, dataFabPeca FROM PECAS GROUP BY nomePeca, dataFabPeca HAVING AVG(custoPeca) > (SELECT AVG(custoPeca) FROM PECAS WHERE EXTRACT(YEAR from dataFabPeca) = 2017 );
 -- 3 - 
-
 -- 4 - 
 -- 5 - 

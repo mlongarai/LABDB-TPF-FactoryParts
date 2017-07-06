@@ -13,6 +13,7 @@ public class Main {
             //Open the connection
             Connection conn = Database.getConnection();
 
+            MenuSelect.select();
             /*
             * -- a. 5 consultas básicas envolvendo os comandos distinct,
             * order by, count(*), like, in e funções de manipulação de datas.
@@ -52,7 +53,9 @@ public class Main {
             //select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA from PEDIDOS join MONTAGEM on pedidos.IDD = montagem.idPedido;
             //Factory.selectPedMontagem(conn);
 
-            //-- 8 -
+            //-- 8 - Nome produto, nome peça, custo peça, id pedido, data entrega do pedido com 3 Tabelas.
+            // select produtos.nomeProduto NOME_PRODUTO, pecas.nomePeca NOME_PECA, pecas.custoPeca CUSTO_PECA, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega DATA from CLIENTES join PEDIDOS on pedidos.idCliente = clientes.IDD join montagem on montagem.idPedido = pedidos.IDD join produtos on produtos.idPedido = pedidos.IDD join pecas on pecas.IDD = montagem.idPeca
+            //Factory.selectProd3Tabelas(conn);
 
             //-- 9 -
 
@@ -87,10 +90,12 @@ public class Main {
             * -- d. 5 consultas envolvendo sub-consultas.
             */
 
-            //-- 16 -
-
-            //-- 17 -
-
+            //-- 16 - Produtos com valor menor do que a média de 100 produtos em estoque?
+            //SELECT nomeProduto NOME, precoProduto PRECO FROM PRODUTOS GROUP BY nomeProduto, precoProduto HAVING AVG(precoProduto) < (SELECT AVG(qtdProduto) FROM PRODUTOS WHERE qtdProduto > 100);
+            //Factory.selectProd100(conn);
+            //-- 17 - Pecas que tiveram a sua media maior que a media de pecas de 2017?
+            // SELECT nomePeca, dataFabPeca FROM PECAS GROUP BY nomePeca, dataFabPeca HAVING AVG(custoPeca) > (SELECT AVG(custoPeca) FROM PECAS WHERE EXTRACT(YEAR from dataFabPeca) = 2017 );
+            //Factory.selectProdMaiorMed(conn);
             //-- 18 -
 
             //-- 19 -

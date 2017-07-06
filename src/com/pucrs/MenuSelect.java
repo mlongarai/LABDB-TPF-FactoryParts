@@ -1,99 +1,107 @@
 package com.pucrs;
 
+import javax.swing.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class MenuSelect {
 
-    /*
-    public static void select() {
+
+    public static void select() throws SQLException {
+
+        Connection conn = Database.getConnection();
 
         int op;
         do {
-            op = Integer.parseInt(JOptionPane.showInputDialog("Menu de consultas"
-                    +   "\n1 - Consultas Básicas (DISTINCT, ORDER BY, COUNT(*), LIKE, IN, DATE)"
-                    +   "\n2 - Consultas envolvendo Joins"
-                    +   "\n3 - Consultas envolvendo GROUP BY, HAVING e funções de agregação"
-                    +   "\n4 - Consultas envolvendo Sub-consultas"
-                    +   "\n5 - Sair"));
+            op = Integer.parseInt(JOptionPane.showInputDialog("Menu de Consultas:\n"
+                    +   "\n1 - Cidades da Região Sul"
+                    +   "\n2 - Quantidade de Filiais"
+                    +   "\n3 - Id do Vendendor e valor dos pedidos que foram feitos nas filiais (1, 2 e 3)"
+                    +   "\n4 - Todos os pedidos realizados entre janeiro e  março de 2017"
+                    +   "\n5 - Valores de todos os pedidos realizados no mês de janeiro de 2017"
+                    +   "\n6 - Nome do cliente, cpf, id pedido e valor com 2 Tabelas"
+                    +   "\n7 - ID pedido, ID peça com 2 Tabelas"
+                    +   "\n8 - Nome do produto, peça, custo, id e data entrega do pedido com 3 Tabelas"
+                    +   "\n9 - xxxxxxxxxxxxx"
+                    +   "\n10 - xxxxxxxxxxxxx"
+                    +   "\n11 - Valor total de  cada  produto"
+                    +   "\n12 - Valor médio dos pedidos por cidade (Filial)"
+                    +   "\n13 - Valor médio faturado  com as  vendas  por pedido e vendedor"
+                    +   "\n14 - Filiais com mais de 2 clientes"
+                    +   "\n15 - Produtos com media de quantidade maior que 2"
+                    +   "\n16 - Produtos com valor menor do que a média de 100 produtos em estoque"
+                    +   "\n17 - Peças que tiveram a sua média maior que a média de peças de 2017"
+                    +   "\n18 - xxxxxxxxxxxxx"
+                    +   "\n19 - xxxxxxxxxxxxx"
+                    +   "\n20 - xxxxxxxxxxxxx"
+                    +   "\n0 - Sair"));
 
             switch (op) {
                 case 1:
-                    Metodos.exibeCadastro(cadastro);
+                    Factory.selectCidadesSul(conn);
                     break;
                 case 2:
-                    // entrada dos dados
-                    Cliente c11 = new Cliente();
-                    c11.setNome(JOptionPane.showInputDialog("Nome do Cliente"));
-                    c11.setCpf(JOptionPane.showInputDialog("CPF do Cliente:"));
-                    c11.setSexo(JOptionPane.showInputDialog("Sexo do Cliente"));
-                    c11.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Idade do Cliente:")));
-                    int op2;
-                    do {
-                        op2 = Integer.parseInt(
-                                JOptionPane.showInputDialog("Cliente é Sócio?" + "\n1 - Sim" + "\n2 - Não" + "\n3 - Sair"));
-
-                        switch (op2) {
-                            case 1:
-                                c11.setSocio("1");
-                                break;
-                            case 2:
-                                c11.setSocio("0");
-                                break;
-                            case 3:
-                                Metodos.exibeCadastro(cadastro);
-                                break;
-
-                        }
-                    } while (op2 < 1 || op2 > 3);
-                    // adicionando a lista
-                    cadastro.add(c11);
-
-                    // mostra a nova lista
-
-                    Metodos.setSocio(cadastro);
-                    LogClientes.armazenar(cadastro);
-                    Metodos.exibeCadastro(cadastro);
-                    MenuSelect.select(cadastro);
+                    Factory.selectQtdFilial(conn);
                     break;
-
                 case 3:
-                    String cpfBuscado = JOptionPane.showInputDialog("Informe o CPF do cliente para busca:");
-
-                    Cliente clienteBuscado = Metodos.buscarClientes(cpfBuscado, cadastro);
-                    if (clienteBuscado != null)
-                        JOptionPane.showMessageDialog(null,
-                                "Resultado da busca:" + "\n................................" + "\n"
-                                        + clienteBuscado.getNome() + "\nCPF:" + clienteBuscado.getCpf() + "\nIdade: "
-                                        + clienteBuscado.getIdade() + "\nSexo: " + clienteBuscado.getSexo()
-                                        // + "\nSocio: " + .clienteBuscado.socio()
-                                        + "\n................................");
-                    else
-                        JOptionPane.showMessageDialog(null, "Cliente não encontrado!");
-                    MenuSelect.select(cadastro);
+                    Factory.selectPed3Filiais(conn);
                     break;
-
                 case 4:
-                    String cpfRemovido = JOptionPane.showInputDialog("Informe o CPF do cliente a ser removido:");
-
-                    Cliente clienteRemovido = Metodos.buscarClientes(cpfRemovido, cadastro);
-                    if (clienteRemovido != null)
-                        cadastro.remove(clienteRemovido);
-                    else
-                        JOptionPane.showMessageDialog(null, "Cliente não encontrado!");
-                    Metodos.exibeCadastro(cadastro); // lista após remoção
+                    Factory.selectPedJaneiro(conn);
                     break;
-
                 case 5:
-                    Metodos.exibeInfo(cadastro);
+                    Factory.selectPedJaneiro17(conn);
                     break;
                 case 6:
+                    Factory.selectCliPed(conn);
+                    break;
+                case 7:
+                    Factory.selectPedMontagem(conn);
+                    break;
+                case 8:
+                    Factory.selectProd3Tabelas(conn);
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    Factory.selectValorProd(conn);
+                    break;
+                case 12:
+                    Factory.selectValorMed(conn);
+                    break;
+                case 13:
+                    Factory.selectValorFat(conn);
+                    break;
+                case 14:
+                    Factory.selectFilCli(conn);
+                    break;
+                case 15:
+                    Factory.selectProdMedia(conn);
+                    break;
+                case 16:
+                    Factory.selectProd100(conn);
+                    break;
+                case 17:
+                    Factory.selectProdMaiorMed(conn);
+                    break;
+                case 18:
+                    break;
+                case 19:
+                    break;
+                case 20:
+                    break;
+                case 0:
                     JOptionPane.showMessageDialog(null, "Saindo do programa...");
                     System.exit(0);
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção errada, tente denovo!");
+                    JOptionPane.showMessageDialog(null, "Opção errada, tente de novo!");
                     break;
             } // fim do switch
-        } while (op != 5);
+        } while (op != 0);
         MenuSelect.select();
     }
-    */
+
 }

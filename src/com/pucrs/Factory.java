@@ -160,6 +160,28 @@ public class Factory {
         rs.close();
     }
 
+    public static void selectProd3Tabelas(Connection connection) throws SQLException {
+        String sql = "select produtos.nomeProduto NOME_PRODUTO, pecas.nomePeca NOME_PECA, pecas.custoPeca CUSTO_PECA, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega DATA from CLIENTES join PEDIDOS on pedidos.idCliente = clientes.IDD join montagem on montagem.idPedido = pedidos.IDD join produtos on produtos.idPedido = pedidos.IDD join pecas on pecas.IDD = montagem.idPeca";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("8. --------------------------------------------------------\n");
+        System.out.println("NOME_PRODUTO\t\t\t\t\t" + "NOME_PECA\t\t\t\t" + "CUSTO_PECA\t\t" + "ID_PEDIDO\t\t" + "DATA\t" + "\n");
+
+        while (rs.next()) {
+            String NOME_PRODUTO = rs.getString("NOME_PRODUTO");
+            String NOME_PECA = rs.getString("NOME_PECA");
+            int CUSTO_PECA = rs.getInt("CUSTO_PECA");
+            int ID_PEDIDO = rs.getInt("ID_PEDIDO");
+            Date DATA = rs.getDate("DATA");
+            System.out.println(
+                    NOME_PRODUTO + "\t\t\t" + NOME_PECA + "\t\t\t" + CUSTO_PECA + "\t\t\t\t" + ID_PEDIDO+ "\t\t\t\t" + DATA + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
 
     public static void selectValorProd(Connection connection) throws SQLException {
         String sql = "select nomeProduto NOME, sum(precoProduto*qtdProduto) Total from PRODUTOS group by nomeProduto order by sum(precoProduto*qtdProduto) DESC";
@@ -259,6 +281,46 @@ public class Factory {
             int Quantidade = rs.getInt("Quantidade");
             System.out.println(
                     nomeProduto + "\t\t\t\t\t" + Quantidade + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectProd100(Connection connection) throws SQLException {
+        String sql = "SELECT nomeProduto NOME, precoProduto PRECO FROM PRODUTOS GROUP BY nomeProduto, precoProduto HAVING AVG(precoProduto) < (SELECT AVG(qtdProduto) FROM PRODUTOS WHERE qtdProduto > 100)";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("16. --------------------------------------------------------\n");
+        System.out.println("NOME\t\t\t\t\t\t" + "PRECO"+ "\n");
+
+        while (rs.next()) {
+            String NOME = rs.getString("NOME");
+            int PRECO = rs.getInt("PRECO");
+            System.out.println(
+                    NOME + "\t\t\t\t" + PRECO + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectProdMaiorMed(Connection connection) throws SQLException {
+        String sql = "SELECT nomePeca, dataFabPeca FROM PECAS GROUP BY nomePeca, dataFabPeca HAVING AVG(custoPeca) > (SELECT AVG(custoPeca) FROM PECAS WHERE EXTRACT(YEAR from dataFabPeca) = 2017 )";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("17. --------------------------------------------------------\n");
+        System.out.println("Nome\t\t\t\t\t" + "Data"+ "\n");
+
+        while (rs.next()) {
+            String nomePeca = rs.getString("nomePeca");
+            Date dataFabPeca = rs.getDate("dataFabPeca");
+            System.out.println(
+                    nomePeca + "\t\t\t\t" + dataFabPeca + "\n"
             );
         }
         System.out.println("--------------------------------------------------------\n");
