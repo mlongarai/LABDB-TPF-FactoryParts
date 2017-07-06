@@ -26,15 +26,7 @@ select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR from 
 select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA from PEDIDOS join MONTAGEM on pedidos.IDD = montagem.idPedido;
 
 -- 3. Nome produto, nome peça, custo peça, id pedido, data entrega do pedido. - 3 Tabelas.
-select produtos.nomeProduto, pecas.nomePeca, pecas.custoPeca, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega
-from CLIENTES join PEDIDOS 
-on pedidos.idCliente = clientes.IDD
-join montagem
-on montagem.idPedido = pedidos.IDD
-join produtos
-on produtos.idPedido = pedidos.IDD
-join pecas 
-on pecas.IDD = montagem.idPeca
+select produtos.nomeProduto NOME_PRODUTO, pecas.nomePeca NOME_PECA, pecas.custoPeca CUSTO_PECA, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega DATA from CLIENTES join PEDIDOS on pedidos.idCliente = clientes.IDD join montagem on montagem.idPedido = pedidos.IDD join produtos on produtos.idPedido = pedidos.IDD join pecas on pecas.IDD = montagem.idPeca
 -- 4 - 
 -- 5 - 
 
