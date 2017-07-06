@@ -25,12 +25,16 @@ select nomeCliente NOME, cpf CPF, pedidos.IDD ID_PEDIDO, valorPedido VALOR from 
 -- 2. ID pedido, ID peça - 2 Tabelas
 select montagem.idPedido ID_PEDIDO, montagem.idPeca ID_PECA from PEDIDOS join MONTAGEM on pedidos.IDD = montagem.idPedido;
 
--- 3. xxxxxxxxxxxxx 3 Tabelas
-select pecas.nomePeca, produtos.nomeProduto, clientes.nomeCliente, pedidos.idCliente, pedidos.valorPedido, pedidos.dataEntrega
+-- 3. Nome produto, nome peça, custo peça, id pedido, data entrega do pedido. - 3 Tabelas.
+select produtos.nomeProduto, pecas.nomePeca, pecas.custoPeca, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega
 from CLIENTES join PEDIDOS 
 on pedidos.idCliente = clientes.IDD
 join montagem
-on montagem.idPedido = pedidos.IDD;
+on montagem.idPedido = pedidos.IDD
+join produtos
+on produtos.idPedido = pedidos.IDD
+join pecas 
+on pecas.IDD = montagem.idPeca
 -- 4 - 
 -- 5 - 
 
@@ -63,8 +67,11 @@ SELECT nomeProduto, COUNT(*) Quantidade FROM PRODUTOS GROUP BY nomeProduto HAVIN
             * -- d. 5 consultas envolvendo sub-consultas.
             */
 
--- 1 -
--- 2 - 
+-- 1 - Produtos com valor menor do que a média de 100 produtos em estoque?
+SELECT nomeProduto NOME, precoProduto PRECO FROM PRODUTOS GROUP BY nomeProduto, precoProduto HAVING AVG(precoProduto) < (SELECT AVG(qtdProduto) FROM PRODUTOS WHERE qtdProduto > 100);
+-- 2 - Pecas que tiveram a sua media maior que a media de pecas de 2017?
+SELECT nomePeca, dataFabPeca FROM PECAS GROUP BY nomePeca, dataFabPeca HAVING AVG(custoPeca) > (SELECT AVG(custoPeca) FROM PECAS WHERE EXTRACT(YEAR from dataFabPeca) = 2017 );
 -- 3 - 
+
 -- 4 - 
 -- 5 - 
