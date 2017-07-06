@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31e6a929-6e46-4c7f-a26c-558ced4ecf9b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/Script_FactoryParts.sql" afterPath="$PROJECT_DIR$/sql/Script_FactoryParts.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/Selects.sql" afterPath="$PROJECT_DIR$/sql/Selects.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pucrs/Factory.java" afterPath="$PROJECT_DIR$/src/com/pucrs/Factory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pucrs/Main.java" afterPath="$PROJECT_DIR$/src/com/pucrs/Main.java" />
@@ -21,7 +22,81 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1510">
+              <caret line="221" column="59" lean-forward="true" selection-start-line="221" selection-start-column="59" selection-end-line="221" selection-end-column="59" />
+              <folding>
+                <marker date="1499384564000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+                <marker date="1499384564000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
+                <marker date="1499384564000" expanded="true" signature="8787:9190" ph=" SELECT statement (FILIAL, VENDEDORES, PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="10118:10556" ph=" SELECT statement (PECAS, MONTAGEM, PEDIDOS...)" />
+                <marker date="1499384564000" expanded="true" signature="11477:11614" ph=" SELECT statement (PRODUTOS)" />
+                <marker date="1499384564000" expanded="true" signature="12371:12701" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+                <marker date="1499384564000" expanded="true" signature="13482:13847" ph=" SELECT statement (VENDAS, PRODUTOS)" />
+                <marker date="1499384564000" expanded="true" signature="14730:14876" ph=" SELECT statement (FILIAL, CLIENTES)" />
+                <marker date="1499384564000" expanded="true" signature="15663:15766" ph=" SELECT statement (PECAS, PRODUTOS)" />
+                <marker date="1499384564000" expanded="true" signature="16569:16750" ph=" SELECT statement (PRODUTOS)" />
+                <marker date="1499384564000" expanded="true" signature="17508:17682" ph=" SELECT statement (PECAS)" />
+                <marker date="1499384564000" expanded="true" signature="18465:19007" ph=" SELECT statement (FILIAL, CLIENTES, PEDIDOS...)" />
+                <marker date="1499384564000" expanded="true" signature="20058:20355" ph=" SELECT statement (PEDIDOS)" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OracleStatement.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/src/com/ojdbc7.jar!/oracle/jdbc/driver/OracleStatement.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="1975" column="0" lean-forward="false" selection-start-line="1975" selection-start-column="0" selection-end-line="1975" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuSelect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/pucrs/MenuSelect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-810">
+              <caret line="70" column="70" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,7 +127,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="839" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,8 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -129,6 +202,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,7 +519,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="839" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -467,10 +543,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35367545" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3531856" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18311875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1874106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -502,7 +578,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499339145000" expanded="true" signature="5496:5602" ph="//..." />
+            <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -512,29 +588,33 @@
         <state relative-caret-position="3720">
           <caret line="248" column="38" lean-forward="false" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
           <folding>
-            <marker date="1499340313000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
-            <marker date="1499340313000" expanded="true" signature="8792:8929" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="9686:10016" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="10797:11162" ph=" SELECT statement (VENDAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="12045:12191" ph=" SELECT statement (FILIAL, CLIENTES)" />
-            <marker date="1499340313000" expanded="true" signature="12978:13081" ph=" SELECT statement (PECAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="13884:14065" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="14823:14997" ph=" SELECT statement (PECAS)" />
+            <marker date="1499384564000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="8787:9190" ph=" SELECT statement (FILIAL, VENDEDORES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="10118:10556" ph=" SELECT statement (PECAS, MONTAGEM, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="11477:11614" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="12371:12701" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="13482:13847" ph=" SELECT statement (VENDAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="14730:14876" ph=" SELECT statement (FILIAL, CLIENTES)" />
+            <marker date="1499384564000" expanded="true" signature="15663:15766" ph=" SELECT statement (PECAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="16569:16750" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="17508:17682" ph=" SELECT statement (PECAS)" />
+            <marker date="1499384564000" expanded="true" signature="18465:19007" ph=" SELECT statement (FILIAL, CLIENTES, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="20058:20355" ph=" SELECT statement (PEDIDOS)" />
           </folding>
         </state>
       </provider>
@@ -545,7 +625,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499339145000" expanded="true" signature="5496:5602" ph="//..." />
+            <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -555,29 +635,33 @@
         <state relative-caret-position="465">
           <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <marker date="1499340313000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
-            <marker date="1499340313000" expanded="true" signature="8792:8929" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="9686:10016" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="10797:11162" ph=" SELECT statement (VENDAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="12045:12191" ph=" SELECT statement (FILIAL, CLIENTES)" />
-            <marker date="1499340313000" expanded="true" signature="12978:13081" ph=" SELECT statement (PECAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="13884:14065" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="14823:14997" ph=" SELECT statement (PECAS)" />
+            <marker date="1499384564000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="8787:9190" ph=" SELECT statement (FILIAL, VENDEDORES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="10118:10556" ph=" SELECT statement (PECAS, MONTAGEM, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="11477:11614" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="12371:12701" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="13482:13847" ph=" SELECT statement (VENDAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="14730:14876" ph=" SELECT statement (FILIAL, CLIENTES)" />
+            <marker date="1499384564000" expanded="true" signature="15663:15766" ph=" SELECT statement (PECAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="16569:16750" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="17508:17682" ph=" SELECT statement (PECAS)" />
+            <marker date="1499384564000" expanded="true" signature="18465:19007" ph=" SELECT statement (FILIAL, CLIENTES, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="20058:20355" ph=" SELECT statement (PEDIDOS)" />
           </folding>
         </state>
       </provider>
@@ -598,7 +682,7 @@
           <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499339145000" expanded="true" signature="5496:5602" ph="//..." />
+            <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -620,7 +704,7 @@
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499339145000" expanded="true" signature="5496:5602" ph="//..." />
+            <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -644,42 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="318" column="27" lean-forward="true" selection-start-line="318" selection-start-column="27" selection-end-line="318" selection-end-column="27" />
-          <folding>
-            <marker date="1499340313000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
-            <marker date="1499340313000" expanded="true" signature="8792:8929" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="9686:10016" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
-            <marker date="1499340313000" expanded="true" signature="10797:11162" ph=" SELECT statement (VENDAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="12045:12191" ph=" SELECT statement (FILIAL, CLIENTES)" />
-            <marker date="1499340313000" expanded="true" signature="12978:13081" ph=" SELECT statement (PECAS, PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="13884:14065" ph=" SELECT statement (PRODUTOS)" />
-            <marker date="1499340313000" expanded="true" signature="14823:14997" ph=" SELECT statement (PECAS)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pucrs/MenuSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        <state relative-caret-position="188">
+          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -688,11 +740,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pucrs/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+        <state relative-caret-position="-810">
+          <caret line="70" column="70" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1499339145000" expanded="true" signature="5496:5602" ph="//..." />
+            <marker date="1499383931000" expanded="true" signature="6485:7599" ph="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/com/ojdbc7.jar!/oracle/jdbc/driver/OracleStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="1975" column="0" lean-forward="false" selection-start-line="1975" selection-start-column="0" selection-end-line="1975" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pucrs/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1510">
+          <caret line="221" column="59" lean-forward="true" selection-start-line="221" selection-start-column="59" selection-end-line="221" selection-end-column="59" />
+          <folding>
+            <marker date="1499384564000" expanded="true" signature="241:284" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:294" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:295" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:300" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:302" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:311" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="241:325" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1354" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="1322:1355" ph=" SELECT statement (FILIAL)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2124" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2013:2129" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="2918:3127" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="4374:4492" ph=" SELECT statement (PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="5379:5537" ph=" SELECT statement (CLIENTES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="6468:6589" ph=" SELECT statement (MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="7367:7713" ph=" SELECT statement (CLIENTES, PECAS, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="8787:9190" ph=" SELECT statement (FILIAL, VENDEDORES, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="10118:10556" ph=" SELECT statement (PECAS, MONTAGEM, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="11477:11614" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="12371:12701" ph=" SELECT statement (FILIAL, MONTAGEM, PEDIDOS)" />
+            <marker date="1499384564000" expanded="true" signature="13482:13847" ph=" SELECT statement (VENDAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="14730:14876" ph=" SELECT statement (FILIAL, CLIENTES)" />
+            <marker date="1499384564000" expanded="true" signature="15663:15766" ph=" SELECT statement (PECAS, PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="16569:16750" ph=" SELECT statement (PRODUTOS)" />
+            <marker date="1499384564000" expanded="true" signature="17508:17682" ph=" SELECT statement (PECAS)" />
+            <marker date="1499384564000" expanded="true" signature="18465:19007" ph=" SELECT statement (FILIAL, CLIENTES, PEDIDOS...)" />
+            <marker date="1499384564000" expanded="true" signature="20058:20355" ph=" SELECT statement (PEDIDOS)" />
           </folding>
         </state>
       </provider>

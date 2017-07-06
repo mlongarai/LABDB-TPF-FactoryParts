@@ -57,9 +57,30 @@ public class Main {
             // select produtos.nomeProduto NOME_PRODUTO, pecas.nomePeca NOME_PECA, pecas.custoPeca CUSTO_PECA, pedidos.IDD ID_PEDIDO, pedidos.dataEntrega DATA from CLIENTES join PEDIDOS on pedidos.idCliente = clientes.IDD join montagem on montagem.idPedido = pedidos.IDD join produtos on produtos.idPedido = pedidos.IDD join pecas on pecas.IDD = montagem.idPeca
             //Factory.selectProd3Tabelas(conn);
 
-            //-- 9 -
+            //-- 9 - Rank de vendedores: nome vendedor, cidade filial do vendedor, total pedidos do vendedor
+            /*
+            SELECT VEN.IDD ID_VENDEDOR, FIL.CIDADE CIDADE_FILIAL, SUM(PED.VALORPEDIDO) TOTAL_PEDIDOS
+            FROM PEDIDOS PED INNER JOIN VENDEDORES VEN
+            ON VEN.IDD = PED.IDVENDEDOR
+            INNER JOIN FILIAL FIL
+            ON VEN.IDFILIAL = FIL.IDD
+            GROUP BY VEN.IDD, FIL.CIDADE
+            ORDER BY SUM(PED.VALORPEDIDO) DESC;
+            //Factory.selectRank(conn);
 
-            //-- 10 -
+            //-- 10 - Nome cliente, nome peca, data entrega mais longe
+            SELECT CLI.NOMECLIENTE NOME_CLIENTE, PEC.NOMEPECA NOME_PECA, PED.DATAENTREGA DATA_ENTREGA
+            FROM PECAS PEC INNER JOIN MONTAGEM MON
+            ON PEC.IDD = MON.IDPECA
+            INNER JOIN PEDIDOS PED
+            ON PED.IDD = MON.IDPEDIDO
+            INNER JOIN CLIENTES CLI
+            ON CLI.IDD = PED.IDCLIENTE
+            ORDER BY PED.DATAENTREGA DESC;
+            */
+            //Factory.selectCliData(conn);
+
+
 
              /*
             * -- c. 5 consultas envolvendo group by e having,
@@ -96,9 +117,31 @@ public class Main {
             //-- 17 - Pecas que tiveram a sua media maior que a media de pecas de 2017?
             // SELECT nomePeca, dataFabPeca FROM PECAS GROUP BY nomePeca, dataFabPeca HAVING AVG(custoPeca) > (SELECT AVG(custoPeca) FROM PECAS WHERE EXTRACT(YEAR from dataFabPeca) = 2017 );
             //Factory.selectProdMaiorMed(conn);
-            //-- 18 -
+            //-- 18 - CLientes com pedidos maiores que a media dos pedidos das filiais de Porto Alegre
+            /*
+            SELECT CLI.NOMECLIENTE NOME_CLIENTE, CLI.CIDADE CIDADE_CLIENTE, PED.IDD ID_PEDIDO, PED.VALORPEDIDO VALOR_PEDIDO
+            FROM CLIENTES CLI INNER JOIN PEDIDOS PED
+            ON PED.IDCLIENTE = CLI.IDD
+            WHERE PED.VALORPEDIDO > (
+            SELECT AVG(PED.VALORPEDIDO)
+            FROM PEDIDOS PED INNER JOIN FILIAL FIL
+            ON PED.IDFILIAL = FIL.IDD
+            WHERE FIL.CIDADE = 'Porto Alegre'
+            GROUP BY FIL.CIDADE );
+            */
+            //Factory.selectCliPed01(conn);
 
-            //-- 19 -
+            //-- 19 - Pedidos com valor menor que o maior pedido de novembro
+            /*
+            SELECT IDD, VALORPEDIDO
+            FROM PEDIDOS
+            WHERE VALORPEDIDO < (
+                    SELECT MAX(VALORPEDIDO)
+            FROM PEDIDOS
+            WHERE EXTRACT(MONTH from DATAPEDIDO) = 11)
+            ORDER BY VALORPEDIDO;
+            */
+            //Factory.selectPedValorMenor01(conn);
 
             //-- 20 -
 

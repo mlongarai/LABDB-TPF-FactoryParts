@@ -183,6 +183,61 @@ public class Factory {
         rs.close();
     }
 
+    public static void selectRank(Connection connection) throws SQLException {
+        String sql = "SELECT VEN.IDD ID_VENDEDOR, FIL.CIDADE CIDADE_FILIAL, SUM(PED.VALORPEDIDO) TOTAL_PEDIDOS\n" +
+                "FROM PEDIDOS PED INNER JOIN VENDEDORES VEN\n" +
+                "ON VEN.IDD = PED.IDVENDEDOR\n" +
+                "INNER JOIN FILIAL FIL\n" +
+                "ON VEN.IDFILIAL = FIL.IDD\n" +
+                "GROUP BY VEN.IDD, FIL.CIDADE\n" +
+                "ORDER BY SUM(PED.VALORPEDIDO) DESC";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("9. --------------------------------------------------------\n");
+        System.out.println("ID_VENDEDOR\t\t\t\t" + "CIDADE_FILIAL\t\t\t\t" + "TOTAL_PEDIDOS\t\t" + "\n");
+
+        while (rs.next()) {
+            int ID_VENDEDOR = rs.getInt("ID_VENDEDOR");
+            String CIDADE_FILIAL = rs.getString("CIDADE_FILIAL");
+            int TOTAL_PEDIDOS = rs.getInt("TOTAL_PEDIDOS");
+            System.out.println(
+                    ID_VENDEDOR + "\t\t\t\t\t" + CIDADE_FILIAL + "\t\t\t" + TOTAL_PEDIDOS + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectCliData(Connection connection) throws SQLException {
+        String sql = "SELECT CLI.NOMECLIENTE NOME_CLIENTE, PEC.NOMEPECA NOME_PECA, PED.DATAENTREGA DATA_ENTREGA\n" +
+                "FROM PECAS PEC INNER JOIN MONTAGEM MON\n" +
+                "ON PEC.IDD = MON.IDPECA\n" +
+                "INNER JOIN PEDIDOS PED \n" +
+                "ON PED.IDD = MON.IDPEDIDO\n" +
+                "INNER JOIN CLIENTES CLI \n" +
+                "ON CLI.IDD = PED.IDCLIENTE\n" +
+                "ORDER BY PED.DATAENTREGA DESC";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("10. --------------------------------------------------------\n");
+        System.out.println("NOME_CLIENTE\t\t\t\t\t" + "NOME_PECA\t\t\t\t" + "DATA_ENTREGA\t\t" + "\n");
+
+        while (rs.next()) {
+            String NOME_CLIENTE = rs.getString("NOME_CLIENTE");
+            String NOME_PECA = rs.getString("NOME_PECA");
+            Date DATA_ENTREGA = rs.getDate("DATA_ENTREGA");
+            System.out.println(
+                    NOME_CLIENTE + "\t\t\t" + NOME_PECA + "\t\t\t" + DATA_ENTREGA + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
     public static void selectValorProd(Connection connection) throws SQLException {
         String sql = "select nomeProduto NOME, sum(precoProduto*qtdProduto) Total from PRODUTOS group by nomeProduto order by sum(precoProduto*qtdProduto) DESC";
         Statement statement = connection.createStatement();
@@ -321,6 +376,62 @@ public class Factory {
             Date dataFabPeca = rs.getDate("dataFabPeca");
             System.out.println(
                     nomePeca + "\t\t\t\t" + dataFabPeca + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectCliPed01(Connection connection) throws SQLException {
+        String sql = "SELECT CLI.NOMECLIENTE NOME_CLIENTE, CLI.CIDADE CIDADE_CLIENTE, PED.IDD ID_PEDIDO, PED.VALORPEDIDO VALOR_PEDIDO\n" +
+                "FROM CLIENTES CLI INNER JOIN PEDIDOS PED\n" +
+                "ON PED.IDCLIENTE = CLI.IDD\n" +
+                "WHERE PED.VALORPEDIDO > (  \n" +
+                "  SELECT AVG(PED.VALORPEDIDO)\n" +
+                "  FROM PEDIDOS PED INNER JOIN FILIAL FIL\n" +
+                "  ON PED.IDFILIAL = FIL.IDD\n" +
+                "  WHERE FIL.CIDADE = 'Porto Alegre'\n" +
+                "  GROUP BY FIL.CIDADE )";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("18. --------------------------------------------------------\n");
+        System.out.println("NOME_CLIENTE\t\t\t\t\t" + "CIDADE_CLIENTE\t\t\t"+"ID_PEDIDO\t\t\t\t\t" +"VALOR_PEDIDO\t\t\t\t\t" + "\n");
+
+        while (rs.next()) {
+            String NOME_CLIENTE = rs.getString("NOME_CLIENTE");
+            String CIDADE_CLIENTE = rs.getString("CIDADE_CLIENTE");
+            int ID_PEDIDO = rs.getInt("ID_PEDIDO");
+            int VALOR_PEDIDO = rs.getInt("VALOR_PEDIDO");
+            System.out.println(
+                    NOME_CLIENTE + "\t\t\t\t" + CIDADE_CLIENTE + "\t\t\t\t" + ID_PEDIDO + "\t\t\t\t" + VALOR_PEDIDO + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
+    public static void selectPedValorMenor01(Connection connection) throws SQLException {
+        String sql = "SELECT IDD, VALORPEDIDO\n" +
+                "FROM PEDIDOS\n" +
+                "WHERE VALORPEDIDO < (\n" +
+                "  SELECT MAX(VALORPEDIDO)\n" +
+                "  FROM PEDIDOS\n" +
+                "  WHERE EXTRACT(MONTH from DATAPEDIDO) = 11)\n" +
+                "ORDER BY VALORPEDIDO";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("19. --------------------------------------------------------\n");
+        System.out.println("NOME_CLIENTE\t\t" + "CIDADE_CLIENTE\t\t\t" + "\n");
+
+        while (rs.next()) {
+            int IDD = rs.getInt("IDD");
+            int VALORPEDIDO = rs.getInt("VALORPEDIDO");
+            System.out.println(
+                    IDD + "\t\t\t\t\t" + VALORPEDIDO + "\n"
             );
         }
         System.out.println("--------------------------------------------------------\n");
