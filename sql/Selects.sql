@@ -14,7 +14,7 @@ SELECT * FROM PEDIDOS where EXTRACT(MONTH from dataPedido) >= 1 AND EXTRACT(YEAR
 -- 5 - Os valores de todos os pedidos realizados no mes de janeiro de 2017
 SELECT idVendedor, valorPedido, dataPedido FROM PEDIDOS WHERE EXTRACT(MONTH from dataPedido) = 1  ORDER BY valorPedido;
 
-/*
+            /*
             * -- b. 5 consultas das quais 2 envolvam junções entre duas
             * tabelas e 3 envolvam junções entre três ou mais tabelas.
             */
@@ -101,5 +101,12 @@ WHERE VALORPEDIDO < (
   WHERE EXTRACT(MONTH from DATAPEDIDO) = 11)
 ORDER BY VALORPEDIDO;
 
--- 5 - 
+-- 5 - Retorna modelos de Raspberry com mais de 10 unidades
+SELECT PROD.nomeProduto
+FROM PRODUTOS PROD INNER JOIN PECAS PEC
+ON PROD.IDD = PEC.IDD
+WHERE PEC.qtdPeca > 10 AND EXISTS
+(SELECT *
+FROM PRODUTOS PROD
+WHERE PROD.nomeProduto LIKE 'Ras%')
 

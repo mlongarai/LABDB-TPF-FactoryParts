@@ -143,7 +143,17 @@ public class Main {
             */
             //Factory.selectPedValorMenor01(conn);
 
-            //-- 20 -
+            //-- 20 - Retorna modelos de Raspberry com mais de 10 unidades
+            /*
+            SELECT PROD.nomeProduto
+            FROM PRODUTOS PROD INNER JOIN PECAS PEC
+            ON PROD.IDD = PEC.IDD
+            WHERE PEC.qtdPeca > 10 AND EXISTS
+            (SELECT *
+                    FROM PRODUTOS PROD
+            WHERE PROD.nomeProduto LIKE 'Ras%')
+            */
+            //Factory.selectModelRasp(conn);
 
             // Close the connection.
             conn.close();

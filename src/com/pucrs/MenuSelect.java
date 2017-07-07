@@ -33,7 +33,7 @@ public class MenuSelect {
                     +   "\n17 - Peças que tiveram a sua média maior que a média de peças de 2017"
                     +   "\n18 - CLientes com pedidos maiores que a media dos pedidos das filiais de Porto Alegre"
                     +   "\n19 - Pedidos com valor menor que o maior pedido de novembro"
-                    +   "\n20 - xxxxxxxxxxxxx"
+                    +   "\n20 - Retorna modelos de Raspberry com mais de 10 unidades"
                     +   "\n0 - Sair"));
 
             switch (op) {
@@ -95,6 +95,7 @@ public class MenuSelect {
                     Factory.selectPedValorMenor01(conn);
                     break;
                 case 20:
+                    Factory.selectModelRasp(conn);
                     break;
                 case 0:
                     JOptionPane.showMessageDialog(null, "Saindo do programa...");

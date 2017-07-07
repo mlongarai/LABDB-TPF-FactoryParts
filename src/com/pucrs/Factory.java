@@ -22,7 +22,7 @@ public class Factory {
             String cidade = rs.getString("cidade");
             String uf = rs.getString("uf");
             String regiao = rs.getString("regiao");
-            System.out.println(
+            System.out.print(
                     IDD + "\t\t" + cnpj_filial + "\t" + cidade + "\t\t" + uf + "\t" + regiao + "\n"
             );
         }
@@ -41,7 +41,7 @@ public class Factory {
 
         while (rs.next()) {
             count  = rs.getInt(1);
-            System.out.println("Quantidade de Filiais: " + count);
+            System.out.print("Quantidade de Filiais: " + count);
         }
         System.out.println("\n");
         System.out.println("--------------------------------------------------------\n");
@@ -62,7 +62,7 @@ public class Factory {
             int idVendedor = rs.getInt("idVendedor");
             int valorPedido = rs.getInt("valorPedido");
 
-            System.out.println(
+            System.out.print(
                     idVendedor + "\t\t\t\t" + valorPedido + "\n"
             );
         }
@@ -87,7 +87,7 @@ public class Factory {
             int valorPedido = rs.getInt("valorPedido");
             Date dataPedido = rs.getDate("dataPedido");
             Date dataEntrega = rs.getDate("dataEntrega");
-            System.out.println(
+            System.out.print(
                     IDD + "\t\t" + idVendedor + "\t\t\t\t" + idCliente + "\t\t\t\t" + idFilial + "\t\t\t" + valorPedido + "\t\t\t\t" + dataPedido + "\t\t" + dataEntrega + "\n"
             );
         }
@@ -108,7 +108,7 @@ public class Factory {
             int idVendedor = rs.getInt("idVendedor");
             int valorPedido = rs.getInt("valorPedido");
             Date dataPedido = rs.getDate("dataPedido");
-            System.out.println(
+            System.out.print(
                     idVendedor + "\t\t\t" + valorPedido + "\t\t\t\t" + dataPedido+ "\n"
             );
         }
@@ -131,7 +131,7 @@ public class Factory {
             String CPF = rs.getString("CPF");
             int ID_PEDIDO = rs.getInt("ID_PEDIDO");
             int VALOR = rs.getInt("VALOR");
-            System.out.println(
+            System.out.print(
                     NOME + "\t\t\t\t" + CPF + "\t\t\t" + ID_PEDIDO + "\t\t\t\t" + VALOR + "\n"
             );
         }
@@ -151,7 +151,7 @@ public class Factory {
         while (rs.next()) {
             int ID_PEDIDO = rs.getInt("ID_PEDIDO");
             int ID_PECA = rs.getInt("ID_PECA");
-            System.out.println(
+            System.out.print(
                     ID_PEDIDO + "\t\t\t\t" + ID_PECA + "\n"
             );
         }
@@ -174,7 +174,7 @@ public class Factory {
             int CUSTO_PECA = rs.getInt("CUSTO_PECA");
             int ID_PEDIDO = rs.getInt("ID_PEDIDO");
             Date DATA = rs.getDate("DATA");
-            System.out.println(
+            System.out.print(
                     NOME_PRODUTO + "\t\t\t" + NOME_PECA + "\t\t\t" + CUSTO_PECA + "\t\t\t\t" + ID_PEDIDO+ "\t\t\t\t" + DATA + "\n"
             );
         }
@@ -201,7 +201,7 @@ public class Factory {
             int ID_VENDEDOR = rs.getInt("ID_VENDEDOR");
             String CIDADE_FILIAL = rs.getString("CIDADE_FILIAL");
             int TOTAL_PEDIDOS = rs.getInt("TOTAL_PEDIDOS");
-            System.out.println(
+            System.out.print(
                     ID_VENDEDOR + "\t\t\t\t\t" + CIDADE_FILIAL + "\t\t\t" + TOTAL_PEDIDOS + "\n"
             );
         }
@@ -233,7 +233,7 @@ public class Factory {
                     NOME_CLIENTE + "\t\t\t" + NOME_PECA + "\t\t\t" + DATA_ENTREGA + "\n"
             );
         }
-        System.out.println("--------------------------------------------------------\n");
+        System.out.print("--------------------------------------------------------\n");
         statement.close();
         rs.close();
     }
@@ -249,7 +249,7 @@ public class Factory {
         while (rs.next()) {
             String NOME = rs.getString("NOME");
             int Total = rs.getInt("Total");
-            System.out.println(
+            System.out.print(
                     NOME + "\t\t\t\t" + Total + "\n"
             );
         }
@@ -269,7 +269,7 @@ public class Factory {
         while (rs.next()) {
             String Cidade = rs.getString("Cidade");
             int Valor_Medio = rs.getInt("Valor_Medio");
-            System.out.println(
+            System.out.print(
                     Cidade + "\t\t\t" + Valor_Medio + "\n"
             );
         }
@@ -294,7 +294,7 @@ public class Factory {
             int ID_PEDIDO = rs.getInt("ID_PEDIDO");
             int ID_VENDEDOR = rs.getInt("ID_VENDEDOR");
             int Valor_Medio = rs.getInt("Valor_Medio");
-            System.out.println(
+            System.out.print(
                     ID_PEDIDO + "\t\t\t" + ID_VENDEDOR + "\t\t\t\t" + Valor_Medio +"\n"
             );
         }
@@ -314,7 +314,7 @@ public class Factory {
         while (rs.next()) {
             String FILIAL = rs.getString("FILIAL");
             int Quantidade = rs.getInt("Quantidade");
-            System.out.println(
+            System.out.print(
                     FILIAL + "\t\t\t" + Quantidade + "\n"
             );
         }
@@ -334,7 +334,7 @@ public class Factory {
         while (rs.next()) {
             String nomeProduto = rs.getString("nomeProduto");
             int Quantidade = rs.getInt("Quantidade");
-            System.out.println(
+            System.out.print(
                     nomeProduto + "\t\t\t\t\t" + Quantidade + "\n"
             );
         }
@@ -354,7 +354,7 @@ public class Factory {
         while (rs.next()) {
             String NOME = rs.getString("NOME");
             int PRECO = rs.getInt("PRECO");
-            System.out.println(
+            System.out.print(
                     NOME + "\t\t\t\t" + PRECO + "\n"
             );
         }
@@ -374,7 +374,7 @@ public class Factory {
         while (rs.next()) {
             String nomePeca = rs.getString("nomePeca");
             Date dataFabPeca = rs.getDate("dataFabPeca");
-            System.out.println(
+            System.out.print(
                     nomePeca + "\t\t\t\t" + dataFabPeca + "\n"
             );
         }
@@ -404,7 +404,7 @@ public class Factory {
             String CIDADE_CLIENTE = rs.getString("CIDADE_CLIENTE");
             int ID_PEDIDO = rs.getInt("ID_PEDIDO");
             int VALOR_PEDIDO = rs.getInt("VALOR_PEDIDO");
-            System.out.println(
+            System.out.print(
                     NOME_CLIENTE + "\t\t\t\t" + CIDADE_CLIENTE + "\t\t\t\t" + ID_PEDIDO + "\t\t\t\t" + VALOR_PEDIDO + "\n"
             );
         }
@@ -430,7 +430,7 @@ public class Factory {
         while (rs.next()) {
             int IDD = rs.getInt("IDD");
             int VALORPEDIDO = rs.getInt("VALORPEDIDO");
-            System.out.println(
+            System.out.print(
                     IDD + "\t\t\t\t\t" + VALORPEDIDO + "\n"
             );
         }
@@ -438,4 +438,30 @@ public class Factory {
         statement.close();
         rs.close();
     }
+
+    public static void selectModelRasp(Connection connection) throws SQLException {
+        String sql = "SELECT PROD.nomeProduto\n" +
+                "FROM PRODUTOS PROD INNER JOIN PECAS PEC\n" +
+                "ON PROD.IDD = PEC.IDD\n" +
+                "WHERE PEC.qtdPeca > 10 AND EXISTS\n" +
+                "(SELECT *\n" +
+                "FROM PRODUTOS PROD\n" +
+                "WHERE PROD.nomeProduto LIKE 'Ras%')";
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+
+        System.out.println("20. --------------------------------------------------------\n");
+        System.out.println("nomeProduto\t\t" + "\n");
+
+        while (rs.next()) {
+            String nomeProduto = rs.getString("nomeProduto");
+            System.out.print(
+                    nomeProduto + "\n"
+            );
+        }
+        System.out.println("--------------------------------------------------------\n");
+        statement.close();
+        rs.close();
+    }
+
 }
